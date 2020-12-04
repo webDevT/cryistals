@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="popup">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Cryistals</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/ngDialog.css">
+    <link rel="stylesheet" href="css/ngDialog-theme-default.css">
+	<link rel="stylesheet" href="css/style.min.css">
+	
+</head>
+<body class="cryistals-body" ng-controller="MainCtrl">
+
+<div class="cryistals-wrapper">
+<!-- start header section -->
+	<div class="cryistals-header cryistals-header--page">
+	<div class="cryistals-container">
+		<div class="cryistals__search-wrapper">
+			<div class="cryistals__search-left">
+				<img src="img/back.svg" alt="" class="cryistals__search-wrapper-arrow">
+
+			Recommended for you
+			</div>
+
+			<img src="img/search.svg" alt="">
+			
+
+		</div>
+		
+			
+
+	</div>
+</div>
+
+<!-- end header section -->
+
+
+<!-- start cristals block -->
+<div class="cryistals-container ">
+<a href="" class="cryistals-block cryistals-block--info">
+	
+	<div class="cryistals-win-content">
+		<div class="cryistals-win__text">
+			<div class="cryistals-text">
+						Play games, complete levels & earn
+					</div>
+			<span class="cryistals__title gradient-text">
+						More  Gems!
+					</span>
+					
+		</div>
+
+		<div class="cryistals-win__img">
+			<img src="img/illustration.svg" alt="" class="illustration">
+		</div>
+	</div>
+	
+</a>
+</div>
+<!-- end cristals block -->
+
+<!-- start cristals block -->
+<div class="cryistals-container">
+<div class="cryistals-block">
+	
+	<div class="cryistals-block__header">
+		<a href="popular.html" class="cryistals__text cryistals__block-title">
+			Popular
+		</a>
+
+		<a href="popular.html" class="cryistals-more">
+			<div class="cryistals-more__text">
+				More
+			</div>
+			
+			
+		</a>
+		
+	</div>
+
+
+	<div class="cryistals-play-earn-items">
+		<a href="" class="openPaddingLink cryistals-play-earn-item" ng-click="open()">
+			<span class="cryistals-play-earn__img">
+				<img src="img/img1.jpg" alt="">
+			</span>
+
+			<span class="cryistals-play-earn__title">
+				4 pics 1 word
+			</span>
+			
+		</a>
+		<a href="" class="openPaddingLink cryistals-play-earn-item" ng-click="open()">
+			<span class="cryistals-play-earn__img">
+				<img src="img/img2.jpg" alt="">
+			</span>
+
+			<span class="cryistals-play-earn__title">
+				2 photos 1 Word
+			</span>
+			
+		</a>
+		<a href="" class="openPaddingLink cryistals-play-earn-item" ng-click="open()">
+			<span class="cryistals-play-earn__img">
+				<img src="img/img3.jpg" alt="">
+			</span>
+
+			<span class="cryistals-play-earn__title">
+				Guess the you
+			</span>
+			
+		</a>
+	</div>
+
+
+
+
+
+	
+</div>
+
+
+</div>
+<!-- end cristals block -->
+
+<!-- start cristals block -->
+<div class="cryistals-container">
+<div class="cryistals-block">
+	
+	<div class="cryistals-block__header">
+		<a href="new.html" class="cryistals__text cryistals__block-title">
+			New
+		</a>
+
+		<a href="new.html" class="cryistals-more">
+			<div class="cryistals-more__text">
+				More
+			</div>
+			
+			
+		</a>
+		
+	</div>
+
+
+	<div class="cryistals-play-earn-items">
+		<a href="" class="openPaddingLink cryistals-play-earn-item" ng-click="open()">
+			<span class="cryistals-play-earn__img">
+				<img src="img/img.png" alt="">
+			</span>
+
+			<span class="cryistals-play-earn__title">
+				4 pics 1 word
+			</span>
+			
+		</a>
+		<a href="" class="openPaddingLink cryistals-play-earn-item" ng-click="open()">
+			<span class="cryistals-play-earn__img">
+				<img src="img/img.png" alt="">
+			</span>
+
+			<span class="cryistals-play-earn__title">
+				2 photos 1 Word
+			</span>
+			
+		</a>
+		<a href="" class="openPaddingLink cryistals-play-earn-item" ng-click="open()">
+			<span class="cryistals-play-earn__img">
+				<img src="img/img.png" alt="">
+			</span>
+
+			<span class="cryistals-play-earn__title">
+				Guess the you
+			</span>
+			
+		</a>
+	</div>
+
+
+
+
+
+	
+</div>
+
+
+</div>
+<!-- end cristals block -->
+
+</div>
+<!-- Кнопка, при нажатии на которую будет скопирован текст, находящийся в атрибуте data-clipboard-text -->
+
+
+
+    <!-- Template -->
+    <script type="text/ng-template" id="firstDialogId">
+    	
+    	<div class="popup-content">
+    		<div class="btn-clipboard btn-clipboard--popup" data-clipboard-text="https//somelink.html">
+ <img src="img/share.svg" alt="" class="share-btn">
+
+ <div class="cipboard-succ" id="cipboard-succ">
+ 	Game link
+copied!
+ </div>
+</div>
+    		<img src="img/img3.jpg" alt="" class="popup-img">
+    	<div class="popup-title">
+    		Guess the Youtuber
+    	</div>
+    	<a href="" class="popup-button">
+    		Play now!
+
+    	</a>
+    	</div>
+    	
+       
+    </script>
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+    <script>window.angular || document.write('<script src="../bower_components/angular/angular.min.js">\x3C/script>')</script>
+    <script src="js/ngDialog.js"></script>
+
+    <!-- App -->
+    <script>
+        var app = angular.module('popup', ['ngDialog']);
+
+        app.config(['ngDialogProvider', function (ngDialogProvider) {
+            ngDialogProvider.setDefaults({
+                className: 'ngdialog-theme-default',
+            });
+        }]);
+
+        app.controller('MainCtrl', function ($scope, $rootScope, ngDialog, $timeout) {
+
+            $scope.open = function () {
+                ngDialog.open({ template: 'firstDialogId' });
+            };
+
+            $rootScope.$on('ngDialog.setPadding', function (event, padding)
+            {
+                angular.element( document.querySelector('.paddingHeader') ).css('padding-right', padding + 'px');
+            });
+        });
+
+
+
+    </script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="js/clipboard.js"></script>
+	 <script>
+  var clipboard = new ClipboardJS('.btn-clipboard');
+
+  clipboard.on('success', function(e) {
+   
+   $('.btn-clipboard').addClass('is-copy');
+   setTimeout(function(){
+	$('.cipboard-succ').fadeOut();
+}, 2000);
+});
+
+    </script>
+
+ 
+	<script src="js/libs.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
