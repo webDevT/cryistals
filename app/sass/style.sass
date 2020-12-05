@@ -14,6 +14,8 @@
 	font-size: 16px
 	font-weight: 400
 	color: #333333
+	position: relative
+	overflow: hidden
 	padding-bottom: 16px
 .cryistals-container
 	width: 91.111%
@@ -59,6 +61,9 @@
 	font-size: 20px
 	display: flex 
 	align-items: center
+	background: transparent
+	border: none
+	outline: none
 	img 
 		margin-right: 14px
 .cryistals-header__top
@@ -284,7 +289,8 @@
 	width: 100% 
 	box-shadow: (0px 0px 14px rgba(0, 0, 0, 0.1))
 	border-radius: 5px
-	img 
+	position: relative
+	.cryistals-play-earn__icon 
 		width: 100%
 		height: 100%
 		border-radius: 5px
@@ -418,6 +424,85 @@
 .btn-clipboard--popup.is-copy
 	.cipboard-succ
 		display: block
+.game-name
+	display: flex
+	width: 100% 
+	height: 100%
+	img 
+		margin-right: 16px
+
+.selectize-dropdown-content
+	scrollbar-width: thin
+	//scrollbar-color: #E0E0E0 #f6f5f5
+	
+
+.selectize-dropdown-content::-webkit-scrollbar
+	width: 3px
+	background-color: #f6f5f5
+.selectize-dropdown-content::-webkit-scrollbar-track-piece
+	background-color: #f6f5f5
+	border: none
+.selectize-dropdown-content::-webkit-scrollbar-thumb	
+	background-color: #E0E0E0	
+	border-radius: 1px
+.search-modal
+	position: absolute
+	width: 100% 
+	height: 100%
+	left: 0
+	display: none
+	padding: 27px 0px
+	top: 0
+	box-sizing: border-box
+	background: rgba(#333333, .8)
+	.game-serch-wrapper
+		display: flex 
+		justify-content: center 
+		width: 100%
+	.game 
+		width: 91.111%
+.selectize-control.single .selectize-input
+	//height: 40px
+	display: flex
+	align-items: center
+	//position: relative
+	padding-left: 50px
+	background-image: url('../img/back2.svg') !important
+	background-position: left 16px center !important
+	background-repeat: no-repeat !important
+.cryistals-spinner
+	position: absolute
+	top: 50% 
+	left: 50%
+	transform: translateY(-50%) translateX(-50%)
+.warning
+	position: fixed
+	bottom: 10px
+	background: #c8302b
+	color: #fff 
+	right: 10px
+	padding: 10px 30px
+	border-radius: 5px
+	box-shadow: 0 0 5px rgba(#c8302b, 0.7)
+	transition: all 0.5s 
+	transform: translate(110%)
+.warning.active 
+	transform: translate(110%)
+	animation-name: pulse
+	animation-duration: 5s
+
+@keyframes pulse
+	0%
+		transform: translate(110%)
+	10%
+		transform: translate(0%)
+	90%
+		transform: translate(0%)
+	100% 
+		transform: translate(110%)
+
+
+
 @import "media"
 
 

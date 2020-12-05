@@ -24,4 +24,22 @@ $('.cryistals-slider').slick({
  
 })
 
+
+$('.cryistals__search-wrapper').click(function(){
+  $('.search-modal').fadeIn();
+})
+
+
+});
+
+jQuery(function($){
+  $(document).mouseup(function (e){ 
+    var div = $(".search-modal"); 
+    var div2 = $(".game");
+    if (!div2.is(e.target) 
+        && div2.has(e.target).length === 0) {
+      div.fadeOut();
+
+    }
+  });
 });

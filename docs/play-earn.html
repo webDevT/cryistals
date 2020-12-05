@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="popup">
+<html lang="en" ng-app="popup" class="no-js">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,8 +9,57 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/ngDialog.css">
     <link rel="stylesheet" href="css/ngDialog-theme-default.css">
+			<link rel="stylesheet" href="css/selectize.default.css">
 	<link rel="stylesheet" href="css/style.min.css">
+<style type="text/css">
+		.selectize-control.game .selectize-dropdown [data-selectable] {
+		
+			position: relative;
+			-webkit-box-sizing: content-box;
+			box-sizing: content-box;
+			padding: 10px 10px 10px 10px;
+		}
+		.selectize-control.game .selectize-dropdown [data-selectable]:last-child {
+			border-bottom: 0 none;
+		}
+		.selectize-control.game .selectize-dropdown .by {
+			font-size: 11px;
+			opacity: 0.8;
+		}
+		.selectize-control.game .selectize-dropdown .by::before {
+			content: 'by ';
+		}
+		.selectize-control.single .selectize-input, .selectize-dropdown.single {
+			background: #fff;
+			border: none;
+			box-shadow: 0px 0px 30px rgba(31, 31, 31, 0.07);
+			border-radius: 5px;
+		}
+		
+		
 	
+		
+	
+		.selectize-control.game::before {
+			-moz-transition: opacity 0.2s;
+			-webkit-transition: opacity 0.2s;
+			transition: opacity 0.2s;
+			content: ' ';
+			z-index: 2;
+			position: absolute;
+			display: block;
+			top: 12px;
+			right: 34px;
+			width: 16px;
+			height: 16px;
+			background: url(img/spinner.gif);
+			background-size: 16px 16px;
+			opacity: 0;
+		}
+		.selectize-control.game.loading::before {
+			opacity: 0.4;
+		}
+		</style>
 </head>
 <body class="cryistals-body" ng-controller="MainCtrl">
 
@@ -85,7 +134,7 @@
 	<div class="cryistals-play-earn-items">
 		<a href="" class="openPaddingLink cryistals-play-earn-item" ng-click="open()">
 			<span class="cryistals-play-earn__img">
-				<img src="img/img1.jpg" alt="">
+				<img src="img/img1.jpg" alt="" class="cryistals-play-earn__icon">
 			</span>
 
 			<span class="cryistals-play-earn__title">
@@ -95,7 +144,7 @@
 		</a>
 		<a href="" class="openPaddingLink cryistals-play-earn-item" ng-click="open()">
 			<span class="cryistals-play-earn__img">
-				<img src="img/img2.jpg" alt="">
+				<img src="img/img2.jpg" alt="" class="cryistals-play-earn__icon">
 			</span>
 
 			<span class="cryistals-play-earn__title">
@@ -105,7 +154,7 @@
 		</a>
 		<a href="" class="openPaddingLink cryistals-play-earn-item" ng-click="open()">
 			<span class="cryistals-play-earn__img">
-				<img src="img/img3.jpg" alt="">
+				<img src="img/img3.jpg" alt="" class="cryistals-play-earn__icon">
 			</span>
 
 			<span class="cryistals-play-earn__title">
@@ -122,12 +171,15 @@
 	
 </div>
 
+			
+									
+					
+				
 
-</div>
 <!-- end cristals block -->
 
 <!-- start cristals block -->
-<div class="cryistals-container">
+
 <div class="cryistals-block">
 	
 	<div class="cryistals-block__header">
@@ -149,7 +201,8 @@
 	<div class="cryistals-play-earn-items">
 		<a href="" class="openPaddingLink cryistals-play-earn-item" ng-click="open()">
 			<span class="cryistals-play-earn__img">
-				<img src="img/img.png" alt="">
+				<img src="img/img.png" alt="" class="cryistals-play-earn__icon">
+				<img src="img/spinner.gif" alt="" class="cryistals-spinner">
 			</span>
 
 			<span class="cryistals-play-earn__title">
@@ -159,7 +212,8 @@
 		</a>
 		<a href="" class="openPaddingLink cryistals-play-earn-item" ng-click="open()">
 			<span class="cryistals-play-earn__img">
-				<img src="img/img.png" alt="">
+				<img src="img/img.png" alt="" class="cryistals-play-earn__icon">
+				<img src="img/spinner.gif" alt="" class="cryistals-spinner">
 			</span>
 
 			<span class="cryistals-play-earn__title">
@@ -169,7 +223,8 @@
 		</a>
 		<a href="" class="openPaddingLink cryistals-play-earn-item" ng-click="open()">
 			<span class="cryistals-play-earn__img">
-				<img src="img/img.png" alt="">
+				<img src="img/img.png" alt="" class="cryistals-play-earn__icon">
+				<img src="img/spinner.gif" alt="" class="cryistals-spinner">
 			</span>
 
 			<span class="cryistals-play-earn__title">
@@ -184,11 +239,18 @@
 
 
 	
-</div>
+
 
 
 </div>
 <!-- end cristals block -->
+
+<div class="search-modal">
+	<div class="game-serch-wrapper">
+		<select id="select-game" class="game" placeholder="Search Google Play"></select>
+	</div>
+	
+</div>
 
 </div>
 <!-- Кнопка, при нажатии на которую будет скопирован текст, находящийся в атрибуте data-clipboard-text -->
@@ -250,7 +312,7 @@ copied!
 
 
     </script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="js/jquery.min.js"></script>
 	<script src="js/clipboard.js"></script>
 	 <script>
   var clipboard = new ClipboardJS('.btn-clipboard');
@@ -265,7 +327,47 @@ copied!
 
     </script>
 
- 
+<script src="js/selectize.js"></script>
+		<script src="js/index.js"></script>
+	<script>
+				$('#select-game').selectize({
+					valueField: 'url',
+					labelField: 'name',
+					searchField: 'name',
+					options: [],
+					create: false,
+					render: {
+						option: function(item, escape) {
+							return '<div>' +
+								
+									'<span class="game-name">' +  '<img src="img/refresh.svg" alt="" class="cryistals__search-wrapper-arrow">' + escape(item.name) + '</span>' +
+									
+								 
+							'</div>';
+						}
+					},
+					score: function(search) {
+						var score = this.getScoreFunction(search);
+						return function(item) {
+							return score(item) * (1 + Math.min(item.watchers / 100, 1));
+						};
+					},
+					load: function(query, callback) {
+						if (!query.length) return callback();
+						$.ajax({
+							url: 'https://api.github.com/legacy/repos/search/' + encodeURIComponent(query),
+							type: 'GET',
+							error: function() {
+								callback();
+							},
+							success: function(res) {
+								callback(res.repositories.slice(0, 10));
+							}
+						});
+					}
+				});
+
+				</script>
 	<script src="js/libs.min.js"></script>
 	<script src="js/main.js"></script>
 </body>

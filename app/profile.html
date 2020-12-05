@@ -12,7 +12,8 @@
 <body class="cryistals-body">
 
 <div class="cryistals-wrapper">
-<!-- start header section -->
+	<form action="" id="form">
+		<!-- start header section -->
 	<div class="cryistals-header cryistals-header--page">
 	<div class="cryistals-container">
 		<div class="cryistals-header__top">
@@ -21,8 +22,9 @@
 			</a>
 
 			<div class="cryistals-header__menu">
-					<a href="" class="cryistals-back">
-				Save</a>
+				 <button type="submit" id="submit" name="submit" class="cryistals-back">Save</button>
+					
+				
 			</div>
 </div>
 			
@@ -43,13 +45,13 @@
 
 
 <div class="cryistals-container">
-	<form class="cryistals-profile__form">
+	<div class="cryistals-profile__form">
 		
 			<div class="cryistals__form-row">
 			<div class="cryistals__label">
 			Full name
 			</div>
-			<input type="text" placeholder="Full name" class="cryistals__input" value="Alan Mitchel">			
+			<input type="text" placeholder="Full name" class="cryistals__input" value="Alan Mitchel" id="first_name" name="name" >			
 		</div>
 
 		<div class="cryistals__form-row">
@@ -57,23 +59,46 @@
 			Email
 			</div>
 
-			<input type="text" placeholder="email" value="marvin@gmail.com" class="cryistals__input" readonly>
+			<input type="text" id="email" name="email" placeholder="email" value="marvin@gmail.com" class="cryistals__input" readonly="">
 
 			
 		</div>
 		
 
 		
-	</form>
+	</div>
 	</div>
 </section>
 
+	</form>
 
 
 
+<div class="warning" id="warning">Fill all required fields</div>
 </div>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="js/jquery.min.js"></script>
 	<script src="js/libs.min.js"></script>
+	
+
+
+    <script>$(document).ready(function() {
+  $('#form').submit(function(e) {
+    e.preventDefault();
+    var first_name = $('#first_name').val();
+    var email = $('#email').val();
+    $(".error").remove();
+ 
+  
+   
+   
+
+    if (first_name.length< 1 ||  email.length< 1 ) {
+      $('.warning').addClass("active");
+    }
+    
+  });
+});
+</script>
 	<script src="js/main.js"></script>
 </body>
 </html>
