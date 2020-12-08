@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="popup">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +7,11 @@
 	<title>Cryistals</title>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/ngDialog.css">
+    <link rel="stylesheet" href="css/ngDialog-theme-default.css">
 	<link rel="stylesheet" href="css/style.min.css">
 </head>
-<body class="cryistals-body">
+<body class="cryistals-body"  ng-controller="MainCtrl">
 
 <div class="cryistals-wrapper">
 <!-- start header section -->
@@ -196,7 +198,7 @@ balance wins!
 
 
 	<div class="cryistals-play-earn-items">
-		<a href="" class="cryistals-play-earn-item">
+		<a href="" class="openPaddingLink cryistals-play-earn-item" ng-click="open()">
 			<span class="cryistals-play-earn__img">
 				<img src="img/img1.jpg" alt="" class="cryistals-play-earn__icon">
 			</span>
@@ -206,7 +208,7 @@ balance wins!
 			</span>
 			
 		</a>
-		<a href="" class="cryistals-play-earn-item">
+		<a href="" class="openPaddingLink cryistals-play-earn-item" ng-click="open()">
 			<span class="cryistals-play-earn__img">
 				<img src="img/img2.jpg" alt="" class="cryistals-play-earn__icon">
 			</span>
@@ -216,7 +218,7 @@ balance wins!
 			</span>
 			
 		</a>
-		<a href="" class="cryistals-play-earn-item">
+		<a href="" class="openPaddingLink cryistals-play-earn-item" ng-click="open()">
 			<span class="cryistals-play-earn__img">
 				<img src="img/img3.jpg" alt="" class="cryistals-play-earn__icon">
 			</span>
@@ -242,6 +244,54 @@ balance wins!
 
 
 </div>
+
+<!-- Template -->
+    <script type="text/ng-template" id="firstDialogId">
+    	<div class="popup-content">
+    		<div class="btn-clipboard btn-clipboard--popup" data-clipboard-text="https//somelink.html">
+ <img src="img/share.svg" alt="" class="share-btn">
+
+ <div class="cipboard-succ" id="cipboard-succ">
+ 	Game link
+copied!
+ </div>
+</div>
+    		<img src="img/img3.jpg" alt="" class="popup-img">
+    	<div class="popup-title">
+    		Guess the Youtuber
+    	</div>
+    	<a href="" class="popup-button">
+    		Play now!
+
+    	</a>
+    	</div>
+    	
+       
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+    <script>window.angular || document.write('<script src="../bower_components/angular/angular.min.js">\x3C/script>')</script>
+    <script src="js/ngDialog.js"></script>
+
+    <!-- App -->
+    <script>
+        var app = angular.module('popup', ['ngDialog']);
+
+        app.config(['ngDialogProvider', function (ngDialogProvider) {
+            ngDialogProvider.setDefaults({
+                className: 'ngdialog-theme-default',
+            });
+        }]);
+
+        app.controller('MainCtrl', function ($scope, $rootScope, ngDialog, $timeout) {
+
+            $scope.open = function () {
+                ngDialog.open({ template: 'firstDialogId' });
+            };
+
+          
+        });
+    </script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="js/libs.min.js"></script>
 	<script src="js/main.js"></script>
