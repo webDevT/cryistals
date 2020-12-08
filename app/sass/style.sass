@@ -107,15 +107,20 @@
 .cryistals-header__photo-img
 	width: 100%
 	height: 100%
+	border-radius: 50%
 .cryistals-header__user-info
 	text-decoration: none
 	.cryistals__title
 		color: #fff
 		display: block
 		margin-bottom: 4px
-.cryistals-header__email
+.cryistals-header__email,
+.cryistals-header__text
 	font-size: 16px 
 	color: rgba(#fff, 0.8)
+.cryistals-header__text
+	max-width: 180px
+	display: block
 .cryistals-amount-wrapper
 	margin-top: 11px
 	display: flex 
@@ -132,10 +137,25 @@
 	display: flex 
 	justify-content: space-between 
 	align-items: center
+	position: relative
+	background-image: url('../img/money.svg')
+	background-position: right center
+	background-repeat: no-repeat
+	min-height: 90px
 	.cryistals-text
 		max-width: 160px
 .cryistals__title
 	margin-bottom: 8px
+.cryistals-win-content--raffle
+	background-image: url('../img/tickets.svg')
+	background-position: right center
+	background-repeat: no-repeat
+
+.cryistals-win-content--info
+	background-image: url('../img/illustration.svg')
+	background-position: right center
+	background-repeat: no-repeat
+	min-height: 114px
 .gradient-text
 	background: linear-gradient(181.7deg, #985ADD 2.89%, #F36580 97.11%)
 	-webkit-background-clip: text
@@ -327,7 +347,7 @@
 	padding: 28px 0
 	justify-content: space-between
 	align-items: center
-	border-bottom: 1px solid #F2F2F2;	
+	border-bottom: 1px solid #F2F2F2
 .transactions-history__item-title
 	font-size: 17px
 	font-weight: 700
@@ -342,12 +362,15 @@
 	min-width: 100px
 	display: flex
 	align-items: center
-	justify-content: space-between
+	justify-content: flex-end
 	margin-left: 15px
 	font-size: 16px 
 	font-weight: 700
-	img 
-		width: 18px
+	background-image: url('../img/cryistal.svg')
+	background-size: 18px
+	background-repeat: no-repeat 
+	background-position: left 8px  center
+	padding-left: 30px
 .cryistals__search-wrapper
 	width: 100%
 	height: 40px
@@ -460,21 +483,75 @@
 		justify-content: center 
 		width: 100%
 	.game 
-		width: 91.111%
+		width: 100%
 .selectize-control.single .selectize-input
-	//height: 40px
 	display: flex
 	align-items: center
-	//position: relative
-	padding-left: 50px
-	background-image: url('../img/back2.svg') !important
-	background-position: left 16px center !important
-	background-repeat: no-repeat !important
+.selectize-control.single .selectize-input, .selectize-dropdown.single
+	background: #fff
+	border: none
+	outline: none
+	padding-left: 16px
+	input 
+		padding-left: 37px !important
 .cryistals-spinner
 	position: absolute
 	top: 50% 
 	left: 50%
 	transform: translateY(-50%) translateX(-50%)
+.close-modal
+	width: 26px
+	height: 100% 
+	background: url('../img/back2.svg')
+	background-repeat: no-repeat 
+	background-position: center
+	cursor: pointer
+	position: absolute
+	left: 16px
+	top: 0
+	z-index: 999
+.selectize-control.game .selectize-dropdown [data-selectable]
+	position: relative
+	-webkit-box-sizing: content-box
+	box-sizing: content-box
+	padding: 10px 10px 10px 10px
+.selectize-control.game .selectize-dropdown [data-selectable]:last-child
+	border-bottom: 0 none
+.selectize-control.game .selectize-dropdown .by
+	font-size: 11px
+	opacity: 0.8
+.selectize-control.game .selectize-dropdown .by::before
+	content: 'by '
+.selectize-control.game::before
+	-moz-transition: opacity 0.2s
+	-webkit-transition: opacity 0.2s
+	transition: opacity 0.2s
+	content: ' '
+	z-index: 2
+	position: absolute
+	display: block
+	top: 12px
+	right: 34px
+	width: 16px
+	height: 16px
+	background: url('../img/spinner.gif')
+	background-size: 16px 16px
+	opacity: 0
+.selectize-control.game.loading::before
+	opacity: 0.4
+.selectize-input.items.input-active,
+.selectize-input.items.focus 
+	box-shadow: none !important
+	border: none !important
+	padding-bottom: 4px !important
+	
+.game-serch-wrapper-content
+	display: flex
+	width: 91.111%
+	box-shadow: 0px 0px 30px rgba(31, 31, 31, 0.07)
+	border-radius: 5px
+	background: #fff
+	position: relative
 .warning
 	position: fixed
 	bottom: 10px
@@ -500,9 +577,135 @@
 		transform: translate(0%)
 	100% 
 		transform: translate(110%)
+.cryistals__search-container
+	width: 100% 
+	display: flex 
+	justify-content: space-between
+//start splash style
+h1.desktop.ng-binding
+	padding-top: 25px !important
+	margin-top: 0 !important
+	max-width: 300px !important
+	padding-left: 0px !important
+	font-size: 58px !important
+	line-height: 1.2 !important
+	margin: 0 auto !important
+	text-align: center !important
+	
 
+.header-content 
+	padding-left: 0 !important
+.download-links__wrapper
+	.download-link__item 
+		margin-top: 70px !important
+		margin-bottom: 94px !important
+header.ng-scope
+	min-height: auto !important
+	padding-top: 25px !important
+	padding-bottom: 10px !important
+.about .container-fluid
+	padding: 0 !important
+.about .container-fluid
+	padding: 0 30px !important
+	h2 
+		padding-top: 10px !important
+		padding-bottom: 20px !important
+		font-size: 28px !important 
+		line-height: 1.5 !important
 
+	.row 
+		flex-direction: column !important
+		.col-lg-6 
+			max-width: 100% !important 
+			img 
+				max-width: 100% !important
+	.download-text-wrapper
+		width: 100% !important
+		.col-lg-6:first-child 
+			order: 2  !important
+			margin-top: 20px !important
+//end splash style
 
+.cryistals-header__contetn--leaderboard
+	background-image: url('../img/money.svg')
+	background-repeat: no-repeat
+	background-position: right center
+	background-size: 119px
+	min-height: 119px
+	margin-top: 0
+
+//start leaderboard style
+.leaderboard-content
+	padding-top: 32px
+.leaderboard-content__title
+	font-size: 20px
+	font-weight: 700
+.leaderboard-content__sub-title
+	color: #828282
+	font-size: 14px
+	margin-top: 3px
+	margin-bottom: 4px
+.leaderboard__item
+	
+	position: relative
+	.cryistals-container
+		display: flex
+		justify-content: space-between
+		align-items: center
+		border-bottom: 1px solid #F2F2F2
+		padding-top: 20px 
+		padding-bottom: 20px
+.leaderboard__item-num
+	position: absolute
+	left: 0 
+	top: 50% 
+	transform: translateY(-50%)
+	height: 20px 
+	width: 40px
+	
+	background: #F2F2F2
+	border-radius: 0px 20px 20px 0px
+	display: flex 
+	align-items: center 
+	justify-content: flex-end
+	padding-right: 8px 
+	box-sizing: border-box
+	font-size: 12px 
+.leaderboard__item-num--first
+	background: linear-gradient(181.7deg, #FF8F6C 2.89%, #F36580 97.11%)
+	color: #fff
+.leaderboard__item-num--second
+	background: linear-gradient(181.7deg, #FEB65A 2.89%, #F36580 97.11%)
+	color: #fff
+.leaderboard__item-num--third
+	background: linear-gradient(180deg, #FFC531 0%, #F99669 100%)
+	color: #fff
+.leaderboard__item-user-info
+	padding-left: 35px
+.leaderboard__item-user-info
+	display: flex
+	align-items: center 
+	img 
+		width: 52px 
+		height: 52px
+		border-radius: 50% 
+	.leaderboard__name
+		margin-left: 10px
+		color: #000
+.leaderboard__item--user-position
+	background: linear-gradient(181.7deg, #FEB65A 2.89%, #F36580 97.11%)	
+	width: 530px
+	margin: 0 auto
+	.cryistals-container
+		border-bottom: none
+.leaderboard__item--user-position.fixed
+	position: fixed
+	bottom: 0 
+	z-index: 999
+	left: 50%
+	transform: translateX(-50%)
+
+//end leaderboard style
 @import "media"
 
 

@@ -43,3 +43,16 @@ jQuery(function($){
     }
   });
 });
+
+
+$(window).scroll(function() {
+   var hT = $('#scroll-to').offset().top,
+       hH = $('#scroll-to').outerHeight(),
+       wH = $(window).height(),
+       wS = $(this).scrollTop();
+   if (wS > (hT+hH-wH)){
+       $('.leaderboard__item--user-position').removeClass('fixed');
+   } else {
+     $('.leaderboard__item--user-position').addClass('fixed');
+   }
+});

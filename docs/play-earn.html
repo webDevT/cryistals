@@ -11,55 +11,7 @@
     <link rel="stylesheet" href="css/ngDialog-theme-default.css">
 			<link rel="stylesheet" href="css/selectize.default.css">
 	<link rel="stylesheet" href="css/style.min.css">
-<style type="text/css">
-		.selectize-control.game .selectize-dropdown [data-selectable] {
-		
-			position: relative;
-			-webkit-box-sizing: content-box;
-			box-sizing: content-box;
-			padding: 10px 10px 10px 10px;
-		}
-		.selectize-control.game .selectize-dropdown [data-selectable]:last-child {
-			border-bottom: 0 none;
-		}
-		.selectize-control.game .selectize-dropdown .by {
-			font-size: 11px;
-			opacity: 0.8;
-		}
-		.selectize-control.game .selectize-dropdown .by::before {
-			content: 'by ';
-		}
-		.selectize-control.single .selectize-input, .selectize-dropdown.single {
-			background: #fff;
-			border: none;
-			box-shadow: 0px 0px 30px rgba(31, 31, 31, 0.07);
-			border-radius: 5px;
-		}
-		
-		
-	
-		
-	
-		.selectize-control.game::before {
-			-moz-transition: opacity 0.2s;
-			-webkit-transition: opacity 0.2s;
-			transition: opacity 0.2s;
-			content: ' ';
-			z-index: 2;
-			position: absolute;
-			display: block;
-			top: 12px;
-			right: 34px;
-			width: 16px;
-			height: 16px;
-			background: url(img/spinner.gif);
-			background-size: 16px 16px;
-			opacity: 0;
-		}
-		.selectize-control.game.loading::before {
-			opacity: 0.4;
-		}
-		</style>
+
 </head>
 <body class="cryistals-body" ng-controller="MainCtrl">
 
@@ -68,14 +20,18 @@
 	<div class="cryistals-header cryistals-header--page">
 	<div class="cryistals-container">
 		<div class="cryistals__search-wrapper">
-			<div class="cryistals__search-left">
-				<img src="img/back.svg" alt="" class="cryistals__search-wrapper-arrow">
+			
+				<a href="index.html">
+					<img src="img/back.svg" alt="" class="cryistals__search-wrapper-arrow">
+				</a>
 
+				<div class="cryistals__search-container">
+					<div class="cryistals__search-left">
 			Recommended for you
 			</div>
 
 			<img src="img/search.svg" alt="">
-			
+				</div>
 
 		</div>
 		
@@ -91,7 +47,7 @@
 <div class="cryistals-container ">
 <a href="" class="cryistals-block cryistals-block--info">
 	
-	<div class="cryistals-win-content">
+	<div class="cryistals-win-content cryistals-win-content--info">
 		<div class="cryistals-win__text">
 			<div class="cryistals-text">
 						Play games, complete levels & earn
@@ -102,9 +58,7 @@
 					
 		</div>
 
-		<div class="cryistals-win__img">
-			<img src="img/illustration.svg" alt="" class="illustration">
-		</div>
+		
 	</div>
 	
 </a>
@@ -247,7 +201,13 @@
 
 <div class="search-modal">
 	<div class="game-serch-wrapper">
+		<div class="game-serch-wrapper-content">
+			<div class="close-modal">
+			
+		</div>
 		<select id="select-game" class="game" placeholder="Search Google Play"></select>
+		</div>
+		
 	</div>
 	
 </div>
