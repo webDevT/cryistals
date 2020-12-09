@@ -20,6 +20,8 @@
     "normalize.css": "^8.0.1"
   },
   "dependencies": {
+    "humanize-duration": "^3.25.0",
+    "momentjs": "^2.0.0",
     "slick-carousel": "^1.8.1"
   }
 }

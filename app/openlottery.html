@@ -261,54 +261,16 @@ balance wins!
 </section>
 <!-- end lottery content -->
 
-<!-- Template -->
-    <script type="text/ng-template" id="firstDialogId">
-    	<div class="popup-content">
-    		<div class="btn-clipboard btn-clipboard--popup" data-clipboard-text="https//somelink.html">
- <img src="img/share.svg" alt="" class="share-btn">
+            
+         
 
- <div class="cipboard-succ" id="cipboard-succ">
- 	Game link
-copied!
- </div>
-</div>
-    		<img src="img/img3.jpg" alt="" class="popup-img">
-    	<div class="popup-title">
-    		Guess the Youtuber
-    	</div>
-    	<a href="" class="popup-button">
-    		Play now!
 
-    	</a>
-    	</div>
-    	
-       
-    </script>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
-    <script>window.angular || document.write('<script src="../bower_components/angular/angular.min.js">\x3C/script>')</script>
-    <script src="js/ngDialog.js"></script>
-
-    <!-- App -->
-    <script>
-        var app = angular.module('popup', ['ngDialog']);
-
-        app.config(['ngDialogProvider', function (ngDialogProvider) {
-            ngDialogProvider.setDefaults({
-                className: 'ngdialog-theme-default',
-            });
-        }]);
-
-        app.controller('MainCtrl', function ($scope, $rootScope, ngDialog, $timeout) {
-
-            $scope.open = function () {
-                ngDialog.open({ template: 'firstDialogId' });
-            };
-
-          
-        });
-    </script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+    <script>window.angular || document.write('<script src="../bower_components/angular/angular.min.js">\x3C/script>')</script>
+  <script src="js/angular-timer.js"></script>  
 	<script src="js/libs.min.js"></script>
 	<script src="js/main.js"></script>
 </body>
