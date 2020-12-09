@@ -490,13 +490,16 @@
 .selectize-control.single .selectize-input
 	display: flex
 	align-items: center
-.selectize-control.single .selectize-input, .selectize-dropdown.single
+.selectize-control.single .selectize-input,
+.selectize-dropdown.single
 	background: #fff
 	border: none
 	outline: none
 	padding-left: 16px
 	input 
 		padding-left: 37px !important
+.selectize-control.single .selectize-input.items.has-options.full.has-items
+	padding-left: 50px !important
 .cryistals-spinner
 	position: absolute
 	top: 50% 
