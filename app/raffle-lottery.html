@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="popup">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Cryistals</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/ngDialog.css">
+    <link rel="stylesheet" href="css/ngDialog-theme-default.css">
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+<body class="cryistals-body"  ng-controller="MainCtrl">
+
+<div class="cryistals-wrapper">
+<!-- start header section -->
+	<div class="cryistals-header">
+	<div class="cryistals-container">
+		<div class="cryistals-header__top">
+			<a href="index.html" class="cryistals-back">
+				<img src="img/back.svg" alt=""> My Gems
+			</a>
+
+</div>
+			<div class="cryistals-header__contetn">
+				<div class="cryistals-header__contetn-left raffle-lottery__header">
+					<span class="cryistals-header__user-info">
+						<span class="cryistals__title">
+						Raffle
+					</span>
+
+					<span class="raffle-header__text">
+						Today’s highest lottery
+balance wins!
+					</span>
+					</span>
+
+				
+					
+				</div>
+
+				
+			</div>
+
+
+			
+		
+	</div>
+</div>
+<!-- end header section -->
+
+<!-- start lottery content -->
+<section class="lottery-content">
+	<div class="lottery-tabs">
+		<div class="lottery-tab">New Lottery</div>
+		<div class="lottery-tab">Сheck Winner</div>
+	</div>
+<div class="cryistals-container">
+	<div class="lottery-tabs__content">
+
+		<div class="lottery-tab__item">
+			
+				<a href="openlottery.html" class="lottery-item">
+					<div class="lottery-item__content">
+						<div class="lottery-left">
+							<div class="lottery-iten__name">
+								LOTTERY NAME!
+							</div>
+							<div class="lottery-item__text">
+								Guaranteed winner today!
+							</div>
+							<div class="lottery-item__timer">
+								10:20:12
+							</div>
+						</div>
+						<div class="lottery-right">
+							<div class="lottery-price">
+								1000
+							</div>
+						</div>
+					</div>
+			
+			</a>
+			
+				<a href="openlottery.html" class="lottery-item lottery-item--yellow">
+					<div class="lottery-item__content">
+						<div class="lottery-left">
+							<div class="lottery-iten__name">
+								LOTTERY NAME!
+							</div>
+							<div class="lottery-item__text">
+								Guaranteed winner today!
+							</div>
+							<div class="lottery-item__timer">
+								10:20:12
+							</div>
+						</div>
+						<div class="lottery-right">
+							<div class="lottery-price">
+								1000
+							</div>
+						</div>
+					</div>
+			
+			</a>
+
+			<a href="openlottery.html" class="lottery-item lottery-item--pink">
+					<div class="lottery-item__content">
+						<div class="lottery-left">
+							<div class="lottery-iten__name">
+								LOTTERY NAME!
+							</div>
+							<div class="lottery-item__text">
+								Guaranteed winner today!
+							</div>
+							<div class="lottery-item__timer">
+								10:20:12
+							</div>
+						</div>
+						<div class="lottery-right">
+							<div class="lottery-price">
+								1000
+							</div>
+						</div>
+					</div>
+			
+			</a>
+		</div>
+
+
+		<div class="lottery-tab__item">
+			
+				<a href="" class="lottery-item lottery-item--past openPaddingLink" ng-click="open()">
+					<div class="lottery-item__content">
+						<div class="lottery-left">
+							<div class="lottery-iten__name">
+								LOTTERY NAME!
+							</div>
+							<div class="lottery-item__text">
+								Guaranteed winner today!
+							</div>
+							
+						</div>
+						<div class="lottery-right">
+							<div class="lottery-price">
+								Reveal now
+							</div>
+						</div>
+					</div>
+			
+			</a>
+			
+				<a href="openlottery.html" class="lottery-item lottery-item--yellow lottery-item--past">
+					<div class="lottery-item__content">
+						<div class="lottery-left">
+							<div class="lottery-iten__name">
+								LOTTERY NAME!
+							</div>
+							<div class="lottery-item__text">
+								Guaranteed winner today!
+							</div>
+							
+						</div>
+						<div class="lottery-right">
+							<div class="lottery-price">
+							Reveal now
+							</div>
+						</div>
+					</div>
+			
+			</a>
+
+			<a href="openlottery.html" class="lottery-item lottery-item--noactive lottery-item--past">
+					<div class="lottery-item__content">
+						<div class="lottery-left">
+							<div class="lottery-iten__name">
+								LOTTERY NAME!
+							</div>
+							<div class="lottery-item__text">
+								Guaranteed winner today!
+							</div>
+							
+						</div>
+						
+					</div>
+			
+			</a>
+
+			<a href="openlottery.html" class="lottery-item lottery-item--noactive lottery-item--past">
+					<div class="lottery-item__content">
+						<div class="lottery-left">
+							<div class="lottery-iten__name">
+								LOTTERY NAME!
+							</div>
+							<div class="lottery-item__text">
+								Guaranteed winner today!
+							</div>
+							
+						</div>
+						
+					</div>
+			
+			</a>
+		</div>
+	</div></div>
+</section>
+<!-- end lottery content -->
+
+<!-- Template -->
+    <script type="text/ng-template" id="firstDialogId">
+    		<div class="popup-content">
+	<div class="popup-cong popup-cong--lottery">
+		<div class="popup-congrats invite-friends__form-title--gradient">
+		Congrats!</div>
+		<div class="popup-lottery__title">
+			You Win $500
+		</div>
+
+		<div class="invite-friends__form-title--gradient">
+		628UY6TI71</div>
+
+		<p>Please, open "My Payments" and submit payment details</p>
+
+			<button class="invite-friends__form-button invite-friends__form-button--sm">
+				My Payments
+			</button>
+
+			<a href="" class="popup-later">Later</a>
+	</div>
+</div>
+    	
+       
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+    <script>window.angular || document.write('<script src="../bower_components/angular/angular.min.js">\x3C/script>')</script>
+    <script src="js/ngDialog.js"></script>
+
+    <!-- App -->
+    <script>
+        var app = angular.module('popup', ['ngDialog']);
+
+        app.config(['ngDialogProvider', function (ngDialogProvider) {
+            ngDialogProvider.setDefaults({
+                className: 'ngdialog-theme-default',
+            });
+        }]);
+
+        app.controller('MainCtrl', function ($scope, $rootScope, ngDialog, $timeout) {
+
+            $scope.open = function () {
+                ngDialog.open({ template: 'firstDialogId' });
+            };
+
+          
+        });
+    </script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="js/libs.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

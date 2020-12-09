@@ -400,11 +400,14 @@
 	outline: none
 .ngdialog.ngdialog-theme-default .ngdialog-content
 	width: 320px
+	padding: 0
 .popup-content
 	width: 100%
 	display: flex 
 	align-items: center
 	flex-direction: column
+	background: #fff
+	border-radius: 10px
 .popup-img
 	width: 94px
 	margin-bottom: 16px
@@ -799,25 +802,204 @@ header.ng-scope
 .popup-congretylation
 	width: 320px
 	max-width: 100%
+
 //end invite friends
 .cipboard-succ.active 
 	display: block
 .popup-cong
 	width: 100% 
 	height: 100%
-	background: url('../img/popup.svg')
+	background: #fff
+	background-image: url('../img/popup.svg')
 	background-repeat: no-repeat
-	padding-bottom: 44px
+	padding: 20px
+	padding-bottom: 44px	
 	padding-top: 250px
 	background-size: 100% 
 	background-position: top center
-	text-align: center
+	text-align: center 
+	border-radius: 10px
+	.invite-friends__form-button
+		border: none
+		outline: none
+
+
 	p 
 		margin-bottom: 0
 .popup-cong-gems
 	font-size: 28px
 	font-weight: 700
 	padding-bottom: 5px
+
+//start raffle lottery 
+.raffle-header__text
+	color: #fff
+	max-width: 200px
+	display: block
+.raffle-lottery__header 
+	height: 104px
+	padding-left: 114px
+	align-items: center
+	display: flex
+	justify-content: center
+	background: url('../img/icn_tickets.svg')
+	background-repeat: no-repeat
+	background-position: left center
+.lottery-tabs 
+	display: flex
+	background: #FFFFFF
+	box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.09)
+.lottery-tab
+	width: 50%
+	display: flex 
+	justify-content: center
+	align-items: center 
+	padding: 20px 0
+	cursor: pointer
+	position: relative
+	color: #828282
+.lottery-tab.active
+	background: linear-gradient(181.7deg, #985ADD 2.89%, #F36580 97.11%)
+	-webkit-background-clip: text
+	-webkit-text-fill-color: transparent
+	color: #985ADD 
+.lottery-tab.active:before  
+	content: ''
+	background: linear-gradient(181.7deg, #985ADD 2.89%, #F36580 97.11%) 
+	width: 100% 
+	height: 2px
+	position: absolute
+	left: 0 
+	bottom: 0
+
+.lottery-item
+	background: #FFD1A7
+	height: 210px 
+	width: 100%
+	margin: 0 auto
+	margin-top: 21px
+	box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.09)
+	border-radius: 4px
+	padding: 10px
+	box-sizing: border-box
+	max-width: 472px
+	display: block
+	text-decoration: none
+	color: #333
+.lottery-item__content
+	width: 100% 
+	height: 100%
+	background-image: url('../img/tick.svg')
+	background-repeat: no-repeat 
+	background-position: center
+	background-size: 100%
+.popup-game
+	padding: 20px
+	display: flex 
+	flex-direction: column 
+	justify-content: center 
+	align-items: center
+	width: 100% 
+	background: #fff
+	border-radius: 10px
+.lottery-item__content
+	display: flex
+	justify-content: space-between
+.lottery-left
+	width: 79.1%
+	padding-left: 10px 
+	box-sizing: border-box
+	display: flex 
+	justify-content: center 
+	align-items: center 
+	flex-direction: column
+.lottery-right
+	width: 20%
+	padding-right: 10px
+	box-sizing: border-box
+	display: flex 
+	justify-content: center 
+	align-items: center
+.lottery-iten__name
+	font-size: 22px 
+	font-weight: 700
+	margin-bottom: 10px
+.lottery-item__text
+	margin-bottom: 10px
+.lottery-item__timer
+	font-size: 28px 
+	font-weight: 700
+.lottery-price
+	font-weight: 700
+	font-size: 20px
+	transform: rotate(-90deg)
+	padding-left: 30px
+	background: url('../img/diamond.svg')
+	background-repeat: no-repeat 
+	background-position: left center
+	white-space: nowrap
+.lottery-tab__item
+	display: none 
+.lottery-tab__item:first-child
+	display: block
+.lottery-item.lottery-item--yellow
+	background: #FFE6A7
+.lottery-item.lottery-item--pink
+	background: #FFB1A7
+.lottery-item.lottery-item--noactive
+	background: #E0E0E0
+	pointer-events: none
+.lottery-item.lottery-item--past
+	.lottery-price
+		background-image: none
+		padding-left: 0
+.openlottery-tickets__row
+	display: flex 
+	justify-content: space-between
+.openlottery__content
+	color: #828282
+.openlottery-title
+	color: #333 
+	font-size: 18px
+	font-weight: 700
+	margin-top: 24px 
+	margin-bottom: 12px
+.buy-ticket-btn
+	background: linear-gradient(181.7deg, #FF8F6C 2.89%, #F36580 97.11%)
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.08)
+	border-radius: 4px
+	width: 100% 
+	height: 48px
+	border: none
+	color: #fff
+	margin-top: 24px
+	cursor: pointer
+	outline: none
+	font-size: 18px
+.popup-cong--lottery
+	background-image: url('../img/popup2.svg')
+	background-repeat: no-repeat
+	background-size: 100% 
+	background-position: top center
+.popup-congrats 
+	font-size: 18px 
+	font-weight: 700
+.popup-lottery__title
+	font-size: 28px 
+	font-weight: 700
+	margin-top: 8px 
+	margin-bottom: 12px
+.invite-friends__form-button--sm
+	max-width: 174px
+	margin: 0 auto
+	margin-top: 24px
+	margin-bottom: 12px
+.popup-later
+	text-decoration: none 
+	color: #828282
+	font-size: 14px
+//end raffle lottery
+
 @import "media"
 
 

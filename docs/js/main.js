@@ -56,3 +56,12 @@ $(window).scroll(function() {
      $('.leaderboard__item--user-position').addClass('fixed');
    }
 });
+
+$(function(){
+$(".lottery-tab").click(function() { 
+  $(".lottery-tab").removeClass("active").eq($(this).index()).addClass("active");
+  $(".lottery-tab__item").hide().eq($(this).index()).fadeIn()
+}).eq(0).addClass("active");
+
+
+});
