@@ -495,7 +495,7 @@
 	background: #fff
 	border: none
 	outline: none
-	padding-left: 16px
+	//padding-left: 16px
 	input 
 		padding-left: 37px !important
 .selectize-control.single .selectize-input.items.has-options.full.has-items
@@ -1032,8 +1032,40 @@ header.ng-scope
 .popup-lottery__sub-title
 	font-weight: 700
 	font-size: 20px
+.search__game-item
+	display: flex 
+	align-items: center 
+	padding: 5px 0
+	img 
+		width: 30px 
+		height: 30px
+.search__game-info
+	margin-left: 15px
+	display: flex 
+	justify-content: center
+	flex-direction: column
+.search-name
+	text-transform: uppercase 
+	font-weight: 700 
+	font-size: 18px 
+	color: #000
+.selectize-dropdown-content
+	max-height: 390px
 
-
+.search-by
+	font-size: 14px
+	margin-bottom: 0
+	padding-bottom: 0
+.search-modal
+	opacity: 0
+	visibility: hidden
+	opacity: 0
+	transition: visibility 0.2s, opacity 0.2s linear
+	display: block
+.search-modal.active
+	display: block
+	opacity: 1
+	visibility: visible
 //end raffle lottery
 
 @import "media"

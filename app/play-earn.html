@@ -199,7 +199,7 @@
 </div>
 <!-- end cristals block -->
 
-<div class="search-modal">
+<div class="search-modal active">
 	<div class="game-serch-wrapper">
 		<div class="game-serch-wrapper-content">
 			<div class="close-modal">
@@ -302,11 +302,14 @@ copied!
 					render: {
 						option: function(item, escape) {
 							return '<div>' +
-								
-									'<span class="game-name">' +  '<img src="img/refresh.svg" alt="" class="cryistals__search-wrapper-arrow">' + escape(item.name) + '</span>' +
-									
-								 
-							'</div>';
+                '<div class="search__game-item">' + '<img src="img/img1.jpg" alt="" class="cryistals__search-wrapper-arrow">' +
+                '<div class="search__game-info">' +
+                    '<div class="search-name">' + escape(item.name) + '</div>' +
+                    '<div class="search-by">' + escape(item.username) + '</div>' +
+                '</div>'
+                '</div>'
+               
+            '</div>';
 						}
 					},
 					score: function(search) {

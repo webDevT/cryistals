@@ -25,9 +25,7 @@ $('.cryistals-slider').slick({
 })
 
 
-$('.cryistals__search-wrapper').click(function(){
-  $('.search-modal').fadeIn();
-})
+
 
 
 });
