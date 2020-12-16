@@ -50,8 +50,10 @@ $(window).scroll(function() {
        wS = $(this).scrollTop();
    if (wS > (hT+hH-wH)){
        $('.leaderboard__item--user-position').removeClass('fixed');
+       $('.leaderboard__item--user-position').addClass('transition');
    } else {
      $('.leaderboard__item--user-position').addClass('fixed');
+     $('.leaderboard__item--user-position').removeClass('transition');
    }
 });
 
