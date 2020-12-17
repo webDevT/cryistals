@@ -11,6 +11,7 @@
 .cryistals-wrapper
 	font-family: $main-font
 	max-width: 530px
+
 	width: 100%
 	margin: 0 auto
 	background: #FAFAFA
@@ -77,12 +78,14 @@
 	padding-top: 19px
 	padding-bottom: 29px
 	background: linear-gradient(#985ADD, #F36580)
-.cryistals-header--fixed
+.cryistals-header
 	position: fixed
 	z-index: 999
 	width: 530px 
 	max-width: 100%
-
+	top: 0
+.cryistals-profile
+	margin-top: 120px
 .cryistals-header--page
 	padding-top: 24px 
 	padding-bottom: 24px
@@ -590,31 +593,6 @@
 	border-radius: 5px
 	background: #fff
 	position: relative
-.warning
-	position: fixed
-	bottom: 10px
-	background: #c8302b
-	color: #fff 
-	right: 10px
-	padding: 10px 30px
-	border-radius: 5px
-	box-shadow: 0 0 5px rgba(#c8302b, 0.7)
-	transition: all 0.5s 
-	transform: translate(110%)
-.warning.active 
-	transform: translate(110%)
-	animation-name: pulse
-	animation-duration: 5s
-
-@keyframes pulse
-	0%
-		transform: translate(110%)
-	10%
-		transform: translate(0%)
-	90%
-		transform: translate(0%)
-	100% 
-		transform: translate(110%)
 .cryistals__search-container
 	width: 100% 
 	display: flex 
@@ -919,6 +897,7 @@ header.ng-scope
 	display: flex
 	background: #FFFFFF
 	box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.09)
+	margin-top: 20px
 .lottery-tab
 	width: 50%
 	display: flex 
@@ -1139,6 +1118,7 @@ header.ng-scope
 	margin-top: 88px
 
 .cryistals-transactions-history
+	margin-top: 75px
 	scrollbar-width: thin
 	//scrollbar-color: #E0E0E0 #f6f5f5
 	
@@ -1156,6 +1136,14 @@ header.ng-scope
 	border-radius: 1px
 .cryistals-container--play-earn
 	margin-top: 104px
+.invite-friends__content
+	margin-top: 340px
+.lottery-content
+	margin-top: 260px
+.lottery-content-all
+	margin-top: 206px
+.cryistals-header--lottery
+	padding-bottom: 0
 //end raffle lottery
 
 @import "media"

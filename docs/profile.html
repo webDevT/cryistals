@@ -74,31 +74,12 @@
 
 
 
-<div class="warning" id="warning">Fill all required fields</div>
+
 </div>
 <script src="js/jquery.min.js"></script>
 	<script src="js/libs.min.js"></script>
 	
 
-
-    <script>$(document).ready(function() {
-  $('#form').submit(function(e) {
-    e.preventDefault();
-    var first_name = $('#first_name').val();
-    var email = $('#email').val();
-    $(".error").remove();
- 
-  
-   
-   
-
-    if (first_name.length< 1 ||  email.length< 1 ) {
-      $('.warning').addClass("active");
-    }
-    
-  });
-});
-</script>
 	<script src="js/main.js"></script>
 </body>
 </html>
