@@ -4,6 +4,10 @@
 .cryistals-body
 	margin: 0
 	padding: 0
+	height: 100vh
+	max-height: 100vh 
+	min-height: 100vh
+	overflow: hidden
 .cryistals-wrapper
 	font-family: $main-font
 	max-width: 530px
@@ -17,6 +21,26 @@
 	position: relative
 	overflow: hidden
 	padding-bottom: 16px
+	height: 100vh
+	overflow-y: scroll
+	box-sizing: border-box
+.cryistals-wrapper
+	scrollbar-width: thin
+	//scrollbar-color: #E0E0E0 #f6f5f5
+	
+.cryistals-wrapper::-webkit-scrollbar,
+.cryistals-wrapper::-webkit-scrollbar
+	width: 4px
+	background-color: #f6f5f5
+.cryistals-wrapper::-webkit-scrollbar-track-piece,
+.cryistals-wrapper::-webkit-scrollbar-track-piece
+	background-color: #f6f5f5
+	border: none
+.cryistals-wrapper::-webkit-scrollbar-thumb,
+.cryistals-wrapper::-webkit-scrollbar-thumb	
+	background-color: #E0E0E0	
+	border-radius: 1px
+
 .cryistals-container
 	width: 91.111%
 	margin: 0 auto
@@ -44,6 +68,8 @@
 	display: flex 
 	justify-content: space-between 
 	align-items: center
+.cryistals-fixed-page-content
+	margin-top: 207px
 // end global style
 
 //start header style
@@ -51,6 +77,12 @@
 	padding-top: 19px
 	padding-bottom: 29px
 	background: linear-gradient(#985ADD, #F36580)
+.cryistals-header--fixed
+	position: fixed
+	z-index: 999
+	width: 530px 
+	max-width: 100%
+
 .cryistals-header--page
 	padding-top: 24px 
 	padding-bottom: 24px
@@ -993,7 +1025,7 @@ header.ng-scope
 		padding-left: 0
 .openlottery-tickets__row
 	display: flex 
-	justify-content: space-between
+	//justify-content: space-between
 	font-family: 'PT Mono', monospace
 .openlottery__content
 	color: #828282
@@ -1016,6 +1048,7 @@ header.ng-scope
 	outline: none
 	font-size: 18px
 	border: none
+
 
 .popup-cong--lottery
 	background-image: url('../img/popup2.svg')
@@ -1102,10 +1135,9 @@ header.ng-scope
 	display: block
 	opacity: 1
 	visibility: visible
-.cryistals-transactions-history,
 .cryistals-container--game
-	max-height: calc(100vh - 82px)
-	overflow: auto
+	margin-top: 88px
+
 .cryistals-transactions-history
 	scrollbar-width: thin
 	//scrollbar-color: #E0E0E0 #f6f5f5
@@ -1122,7 +1154,8 @@ header.ng-scope
 .cryistals-transactions-history::-webkit-scrollbar-thumb	
 	background-color: #E0E0E0	
 	border-radius: 1px
-
+.cryistals-container--play-earn
+	margin-top: 104px
 //end raffle lottery
 
 @import "media"
