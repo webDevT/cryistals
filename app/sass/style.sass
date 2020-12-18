@@ -4,10 +4,6 @@
 .cryistals-body
 	margin: 0
 	padding: 0
-	height: 100vh
-	max-height: 100vh 
-	min-height: 100vh
-	overflow: hidden
 .cryistals-wrapper
 	font-family: $main-font
 	max-width: 530px
@@ -163,6 +159,7 @@
 	font-size: 24px 
 	font-weight: 700
 	color: #fff
+	text-decoration: none
 .cryistals-amount
 	margin-left: 9.6px
 //end header style
@@ -394,7 +391,7 @@
 	border-radius: 20px
 	background: #FFFFFF
 	padding: 8px
-	min-width: 100px
+	min-width: auto
 	display: flex
 	align-items: center
 	justify-content: flex-end
@@ -405,7 +402,9 @@
 	background-size: 18px
 	background-repeat: no-repeat 
 	background-position: left 8px  center
-	padding-left: 30px
+	padding-left: 15px
+.transactions-history__amount	
+	padding-left: 20px
 .cryistals__search-wrapper
 	width: 100%
 	height: 40px
@@ -712,52 +711,36 @@ header.ng-scope
 .leaderboard__item--user-position
 	background: linear-gradient(181.7deg, #FEB65A 2.89%, #F36580 97.11%)	
 	width: 530px
-	margin: 0 auto
-	//transition: all 1s
-	position: relative
-	bottom: 0
+	transition: all 0.5s
+	transform: translateY(0%)
 	
 	.cryistals-container
 		border-bottom: none
 .leaderboard__item--user-position.fixed
 	position: fixed
-	bottom: 0px 
+	bottom: -96px
 	z-index: 999
-	transform: translateY(0)
-	animation: trans2 1000ms
-	animation-fill-mode: forwards
-	-webkit-animation: trans2 1000ms
-	-webkit-animation-fill-mode: forwards	
-
-
-.leaderboard__item--user-position.transition
-	transform: translateY(0)
 	transform: translateY(-100%)
-	animation: trans 500ms
-	animation-fill-mode: forwards
-	-webkit-animation: trans 500ms
-	-webkit-animation-fill-mode: forwards	
+	transition: all 1s
+	// animation: trans2 500ms
+	// animation-fill-mode: forwards
+	// -webkit-animation: trans2 500ms
+	// -webkit-animation-fill-mode: forwards	
 
-.leaderboard__item--user-position.transition2
-	transform: translateY(0)
-	transform: translateY(-100%)
-	animation: trans 500ms
-	animation-fill-mode: forwards
-	-webkit-animation: trans 500ms
-	-webkit-animation-fill-mode: forwards
-	//left: 50%
-	//transform: translateX(-50%)
-//end leaderboard style
-@keyframes trans
-	0%
-		transform: translateY(-100%)
-	100%
-    	transform: translateY(0%)
- @keyframes trans2
-	0%
-		transform: translateY(-100%)
-	100%
-    	transform: translateY(0%)
+// .leaderboard__item--user-position.transition
+// 	transform: translateY(0)
+// 	transform: translateY(-100%)
+// 	animation: trans 500ms
+// 	animation-fill-mode: forwards
+// 	-webkit-animation: trans 500ms
+// 	-webkit-animation-fill-mode: forwards	
+
+// @keyframes trans
+// 	0%
+// 		transform: translateY(-100%)
+// 	100%
+//     	transform: translateY(0%)
+ 
 //start invite friends
 .invite-friends__header
 	display: flex 
@@ -1146,6 +1129,8 @@ header.ng-scope
 .cryistals-header--lottery
 	padding-bottom: 0
 //end raffle lottery
+
+
 
 @import "media"
 

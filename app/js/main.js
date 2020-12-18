@@ -43,17 +43,13 @@ jQuery(function($){
 });
 
 
-$(window).scroll(function() {
-   var hT = $('#scroll-to').offset().top,
-       hH = $('#scroll-to').outerHeight(),
-       wH = $(window).height(),
+$('.cryistals-wrapper').scroll(function() {
+   var wH = $(window).height(),
        wS = $(this).scrollTop();
-   if (wS > (hT+hH-wH)){
+   if (wS > wH){
        $('.leaderboard__item--user-position').removeClass('fixed');
-       $('.leaderboard__item--user-position').addClass('transition');
    } else {
      $('.leaderboard__item--user-position').addClass('fixed');
-     $('.leaderboard__item--user-position').removeClass('transition');
    }
 });
 
@@ -65,3 +61,4 @@ $(".lottery-tab").click(function() {
 
 
 });
+
