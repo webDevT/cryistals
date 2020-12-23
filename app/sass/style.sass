@@ -1,5 +1,683 @@
 @import "vars"
 @import "fonts"
+
+//start selectize
+.selectize-control
+  &.plugin-drag_drop
+    &.multi > .selectize-input > div.ui-sortable-placeholder
+      visibility: visible !important
+      background: #f2f2f2 !important
+      background: rgba(0, 0, 0, 0.06) !important
+      border: 0 none !important
+      box-shadow: inset 0 0 12px 4px #fff
+
+    .ui-sortable-placeholder::after
+      content: "!"
+      visibility: hidden
+
+    .ui-sortable-helper
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2)
+
+  .dropdown-header
+    position: relative
+    padding: 10px 8px
+    border-bottom: 1px solid #d0d0d0
+    background: #f8f8f8
+    border-radius: 3px 3px 0 0
+
+  .dropdown-header-close
+    position: absolute
+    right: 8px
+    top: 50%
+    color: #303030
+    opacity: .4
+    margin-top: -12px
+    line-height: 20px
+    font-size: 20px !important
+
+    &:hover
+      color: #000
+
+.selectize-dropdown.plugin-optgroup_columns
+  .selectize-dropdown-content
+    display: flex
+
+  .optgroup
+    border-right: 1px solid #f2f2f2
+    border-top: 0 none
+    flex-grow: 1
+    flex-basis: 0
+    min-width: 0
+
+    &:last-child
+      border-right: 0 none
+
+    &:before
+      display: none
+
+  .optgroup-header
+    border-top: 0 none
+
+.selectize-control
+  &.plugin-remove_button
+    .item
+      display: inline-flex
+      align-items: center
+      padding-right: 0 !important
+
+      .remove
+        color: inherit
+        text-decoration: none
+        vertical-align: middle
+        display: inline-block
+        padding: 2px 6px
+        border-left: 1px solid #0073bb
+        border-radius: 0 2px 2px 0
+        box-sizing: border-box
+        margin-left: 6px
+
+        &:hover
+          background: rgba(0, 0, 0, 0.05)
+
+      &.active .remove
+        border-left-color: #00578d
+
+    .disabled .item .remove
+      &:hover
+        background: none
+
+      border-left-color: #aaa
+
+    .remove-single
+      position: absolute
+      right: 0
+      top: 0
+      font-size: 23px
+
+  position: relative
+
+.selectize-dropdown
+  color: #303030
+  font-family: inherit
+  font-size: 13px
+  line-height: 18px
+  font-smoothing: inherit
+
+.selectize-input
+  color: #303030
+  font-family: inherit
+  font-size: 13px
+  line-height: 18px
+  font-smoothing: inherit
+
+  input
+    color: #303030
+    font-family: inherit
+    font-size: 13px
+    line-height: 18px
+    font-smoothing: inherit
+
+  background: #fff
+  cursor: text
+  display: inline-block
+
+.selectize-control.single .selectize-input.input-active
+  background: #fff
+  cursor: text
+  display: inline-block
+
+.selectize-input
+  border: 1px solid #d0d0d0
+  padding: 8px 8px
+  display: inline-block
+  width: 100%
+  overflow: hidden
+  position: relative
+  z-index: 1
+  box-sizing: border-box
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1)
+  border-radius: 3px
+
+.selectize-control.multi .selectize-input.has-items
+  padding: calc( 8px - 2px - 1px ) 8px calc( 8px - 2px - 3px - 1px )
+
+.selectize-input
+  &.full
+    background-color: #fff
+
+  &.disabled
+    cursor: default !important
+
+    *
+      cursor: default !important
+
+  &.focus
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15)
+
+  &.dropdown-active
+    border-radius: 3px 3px 0 0
+
+  > *
+    vertical-align: baseline
+    display: inline-block
+    zoom: 1
+
+.selectize-control.multi .selectize-input
+  > div
+    cursor: pointer
+    margin: 0 3px 3px 0
+    padding: 2px 6px
+    background: #1da7ee
+    color: #fff
+    border: 1px solid #0073bb
+
+    &.active
+      background: #92c836
+      color: #fff
+      border: 1px solid #00578d
+
+  &.disabled > div
+    color: #fff
+    background: #d2d2d2
+    border: 1px solid #aaa
+
+    &.active
+      color: #fff
+      background: #d2d2d2
+      border: 1px solid #aaa
+
+.selectize-input
+  > input
+    display: inline-block !important
+    padding: 0 !important
+    min-height: 0 !important
+    max-height: none !important
+    max-width: 100% !important
+    margin: 0 !important
+    text-indent: 0 !important
+    border: 0 none !important
+    background: none !important
+    line-height: inherit !important
+    user-select: auto !important
+    box-shadow: none !important
+
+    &::-ms-clear
+      display: none
+
+    &:focus
+      outline: none !important
+
+    &[placeholder]
+      box-sizing: initial
+
+  &.has-items > input
+    margin: 0 4px !important
+
+  &::after
+    content: " "
+    display: block
+    clear: left
+
+  &.dropdown-active::before
+    content: " "
+    display: block
+    position: absolute
+    background: #f0f0f0
+    height: 1px
+    bottom: 0
+    left: 0
+    right: 0
+
+.selectize-dropdown
+  position: absolute
+  top: 100%
+  left: 0
+  width: 100%
+  z-index: 10
+  border: 1px solid #d0d0d0
+  background: #fff
+  margin: -1px 0 0 0
+  border-top: 0 none
+  box-sizing: border-box
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1)
+  border-radius: 0 0 3px 3px
+
+  [data-selectable]
+    cursor: pointer
+    overflow: hidden
+
+    .highlight
+      background: rgba(125, 168, 208, 0.2)
+      border-radius: 1px
+
+  .option, .optgroup-header, .no-results, .create
+    padding: 5px 8px
+
+  .option
+    cursor: inherit
+    opacity: .5
+
+  [data-disabled]
+    cursor: inherit
+    opacity: .5
+
+    [data-selectable].option
+      cursor: inherit
+      opacity: .5
+
+  [data-selectable].option
+    opacity: 1
+    cursor: pointer
+
+  .optgroup:first-child .optgroup-header
+    border-top: 0 none
+
+  .optgroup-header
+    color: #303030
+    background: #fff
+    cursor: default
+
+  .active
+    background-color: #f5fafd
+    color: #495c68
+
+    &.create
+      color: #495c68
+
+  .create
+    color: rgba(48, 48, 48, 0.5)
+
+.selectize-dropdown-content
+  overflow-y: auto
+  overflow-x: hidden
+  overflow-scrolling: touch
+
+.selectize-dropdown .spinner
+  display: inline-block
+  width: 30px
+  height: 30px
+  margin: 5px 8px
+
+  &:after
+    content: " "
+    display: block
+    width: 24px
+    height: 24px
+    margin: 3px
+    border-radius: 50%
+    border: 5px solid #d0d0d0
+    border-color: #d0d0d0 transparent #d0d0d0 transparent
+    animation: lds-dual-ring 1.2s linear infinite
+
+@keyframes lds-dual-ring
+  0%
+    transform: rotate(0deg)
+
+  100%
+    transform: rotate(360deg)
+
+.selectize-control
+  &.single .selectize-input
+    cursor: pointer
+
+    input
+      cursor: pointer
+
+    &.input-active
+      cursor: text
+
+      input
+        cursor: text
+
+    &:after
+      content: " "
+      display: block
+      position: absolute
+      top: 50%
+      right: 15px
+      margin-top: -3px
+      width: 0
+      height: 0
+      border-style: solid
+      border-width: 5px 5px 0 5px
+      border-color: gray transparent transparent transparent
+
+    &.dropdown-active:after
+      margin-top: -4px
+      border-width: 0 5px 5px 5px
+      border-color: transparent transparent gray transparent
+
+  &.rtl
+    text-align: right
+
+    &.single .selectize-input:after
+      left: 15px
+      right: auto
+
+    .selectize-input > input
+      margin: 0 4px 0 -2px !important
+
+  .selectize-input.disabled
+    opacity: .5
+    background-color: #fafafa
+
+  &.multi .selectize-input
+    &.has-items
+      padding-left: 5px
+      padding-right: 5px
+
+    &.disabled [data-value]
+      color: #999
+      text-shadow: none
+      background: none
+      box-shadow: none
+      border-color: #e6e6e6
+
+      .remove
+        border-color: #e6e6e6
+        background: none
+
+    [data-value]
+      text-shadow: 0 1px 0 rgba(0, 51, 83, 0.3)
+      border-radius: 3px
+      background-color: #1b9dec
+      background-image: linear-gradient(to bottom, #1da7ee, #178ee9)
+      background-repeat: repeat-x
+      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), inset 0 1px rgba(255, 255, 255, 0.03)
+
+      &.active
+        background-color: #0085d4
+        background-image: linear-gradient(to bottom, #008fd8, #0075cf)
+        background-repeat: repeat-x
+
+  &.single .selectize-input
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.8)
+    background-color: #f9f9f9
+    background-image: linear-gradient(to bottom, #fefefe, #f2f2f2)
+    background-repeat: repeat-x
+    border-color: #b8b8b8
+
+.selectize-dropdown
+  &.single
+    border-color: #b8b8b8
+
+  .optgroup-header
+    padding-top: 7px
+    font-weight: bold
+    font-size: .85em
+
+  .optgroup
+    border-top: 1px solid #f0f0f0
+
+    &:first-child
+      border-top: 0 none
+//end selectize
+
+//start ng-dialog
+@-webkit-keyframes ngdialog-fadeout
+  0%
+    opacity: 1
+
+  100%
+    opacity: 0
+
+@keyframes ngdialog-fadeout
+  0%
+    opacity: 1
+
+  100%
+    opacity: 0
+
+@-webkit-keyframes ngdialog-fadein
+  0%
+    opacity: 0
+
+  100%
+    opacity: 1
+
+@keyframes ngdialog-fadein
+  0%
+    opacity: 0
+
+  100%
+    opacity: 1
+
+.ngdialog
+  box-sizing: border-box
+
+  *
+    box-sizing: inherit
+
+    &:before, &:after
+      box-sizing: inherit
+
+  position: fixed
+  overflow: auto
+  -webkit-overflow-scrolling: touch
+  z-index: 10000
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  background: rgba(0, 0, 0, 0.4)
+  animation: ngdialog-fadein 0.5s
+  &.ngdialog-disabled-animation
+    -webkit-animation: none !important
+    animation: none !important
+
+    .ngdialog-overlay, .ngdialog-content
+      -webkit-animation: none !important
+      animation: none !important
+
+.ngdialog-overlay
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  -webkit-backface-visibility: hidden
+  -webkit-animation: ngdialog-fadein 0.5s
+  animation: ngdialog-fadein 0.5s
+  margin-right: 15px
+  background: transparent
+.ngdialog-no-overlay
+  pointer-events: none
+
+.ngdialog.ngdialog-closing .ngdialog-overlay
+  -webkit-backface-visibility: hidden
+  -webkit-animation: ngdialog-fadeout 0.5s
+  animation: ngdialog-fadeout 0.5s
+
+.ngdialog-content
+  background: white
+  -webkit-backface-visibility: hidden
+  -webkit-animation: ngdialog-fadein 0.5s
+  animation: ngdialog-fadein 0.5s
+  pointer-events: all
+
+.ngdialog.ngdialog-closing .ngdialog-content
+  -webkit-backface-visibility: hidden
+  -webkit-animation: ngdialog-fadeout 0.5s
+  animation: ngdialog-fadeout 0.5s
+
+.ngdialog-close:before
+  font-family: 'Helvetica', Arial, sans-serif
+  content: '\00D7'
+  cursor: pointer
+
+html.ngdialog-open, body.ngdialog-open
+  overflow: hidden
+@-webkit-keyframes ngdialog-flyin
+  0%
+    opacity: 0
+    -webkit-transform: translateY(-40px)
+    transform: translateY(-40px)
+
+  100%
+    opacity: 1
+    -webkit-transform: translateY(0)
+    transform: translateY(0)
+
+@keyframes ngdialog-flyin
+  0%
+    opacity: 0
+    -webkit-transform: translateY(-40px)
+    transform: translateY(-40px)
+
+  100%
+    opacity: 1
+    -webkit-transform: translateY(0)
+    transform: translateY(0)
+
+@-webkit-keyframes ngdialog-flyout
+  0%
+    opacity: 1
+    -webkit-transform: translateY(0)
+    transform: translateY(0)
+
+  100%
+    opacity: 0
+    -webkit-transform: translateY(-40px)
+    transform: translateY(-40px)
+
+@keyframes ngdialog-flyout
+  0%
+    opacity: 1
+    -webkit-transform: translateY(0)
+    transform: translateY(0)
+
+  100%
+    opacity: 0
+    -webkit-transform: translateY(-40px)
+    transform: translateY(-40px)
+
+.ngdialog.ngdialog-theme-default
+  padding-bottom: 160px
+  padding-top: 160px
+
+  &.ngdialog-closing .ngdialog-content
+    -webkit-animation: ngdialog-flyout .5s
+    animation: ngdialog-flyout .5s
+
+  .ngdialog-content
+    -webkit-animation: ngdialog-flyin .5s
+    animation: ngdialog-flyin .5s
+    background: #f0f0f0
+    border-radius: 5px
+    color: #444
+    font-family: 'Helvetica',sans-serif
+    font-size: 1.1em
+    line-height: 1.5em
+    margin: 0 auto
+    max-width: 100%
+    padding: 1em
+    position: relative
+    width: 450px
+
+  .ngdialog-close
+    border: none
+    background: transparent
+    cursor: pointer
+    position: absolute
+    right: 0
+    top: 0
+
+    &:before
+      display: block
+      padding: 3px
+      background: transparent
+      color: #bbb
+      content: '\00D7'
+      font-size: 26px
+      font-weight: 400
+      line-height: 26px
+      text-align: center
+
+    &:hover:before, &:active:before
+      color: #777
+
+  .ngdialog-message
+    margin-bottom: .5em
+
+  .ngdialog-input
+    margin-bottom: 1em
+
+    textarea
+      background: #fff
+      border: 0
+      border-radius: 3px
+      font-family: inherit
+      font-size: inherit
+      font-weight: inherit
+      margin: 0 0 .25em
+      min-height: 2.5em
+      padding: .25em .67em
+      width: 100%
+
+    input
+      &[type="text"], &[type="password"], &[type="email"], &[type="url"]
+        background: #fff
+        border: 0
+        border-radius: 3px
+        font-family: inherit
+        font-size: inherit
+        font-weight: inherit
+        margin: 0 0 .25em
+        min-height: 2.5em
+        padding: .25em .67em
+        width: 100%
+
+    textarea:focus
+      box-shadow: inset 0 0 0 2px #8dbdf1
+      outline: none
+
+    input
+      &[type="text"]:focus, &[type="password"]:focus, &[type="email"]:focus, &[type="url"]:focus
+        box-shadow: inset 0 0 0 2px #8dbdf1
+        outline: none
+
+  .ngdialog-buttons
+    *zoom: 1
+
+    &:after
+      content: ''
+      display: table
+      clear: both
+
+  .ngdialog-button
+    border: 0
+    border-radius: 3px
+    cursor: pointer
+    float: right
+    font-family: inherit
+    font-size: .8em
+    letter-spacing: .1em
+    line-height: 1em
+    margin: 0 0 0 .5em
+    padding: .75em 2em
+    text-transform: uppercase
+
+    &:focus
+      -webkit-animation: ngdialog-pulse 1.1s infinite
+      animation: ngdialog-pulse 1.1s infinite
+      outline: none
+
+    &.ngdialog-button-primary
+      background: #3288e6
+      color: #fff
+
+    &.ngdialog-button-secondary
+      background: #e0e0e0
+      color: #777
+
+@media (max-width: 568px)
+  .ngdialog.ngdialog-theme-default .ngdialog-button:focus
+    -webkit-animation: none
+    animation: none
+//end ng dialog
+
+*:focus
+	outline: none
 // start global style
 .cryistals-body
 	margin: 0
@@ -17,14 +695,12 @@
 	color: #333333
 	position: relative
 	overflow: hidden
-	padding-bottom: 16px
 	height: 100vh
 	overflow-y: scroll
 	box-sizing: border-box
 .cryistals-wrapper
 	scrollbar-width: thin
 	//scrollbar-color: #E0E0E0 #f6f5f5
-	
 .cryistals-wrapper::-webkit-scrollbar,
 .cryistals-wrapper::-webkit-scrollbar
 	width: 4px
@@ -617,7 +1293,6 @@ h1.desktop.ng-binding
 		margin-bottom: 94px !important
 header.ng-scope
 	min-height: auto !important
-	padding-top: 25px !important
 	padding-bottom: 10px !important
 .about .container-fluid
 	padding: 0 !important
@@ -696,6 +1371,12 @@ header.ng-scope
 .leaderboard__item-num--third
 	background: linear-gradient(180deg, #FFC531 0%, #F99669 100%)
 	color: #fff
+.leaderboard__item--user-position
+	.leaderboard__item-num--first.leaderboard__item-num,
+	.leaderboard__item-num--second.leaderboard__item-num,
+	.leaderboard__item-num--third.leaderboard__item-num
+		background: #fff
+		color: #333333
 .leaderboard__item-user-info
 	padding-left: 35px
 .leaderboard__item-user-info
@@ -1129,7 +1810,6 @@ header.ng-scope
 .cryistals-header--lottery
 	padding-bottom: 0
 //end raffle lottery
-
 
 
 @import "media"
