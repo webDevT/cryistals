@@ -1811,29 +1811,31 @@ header.ng-scope
 .cryistals-header--lottery
 	padding-bottom: 0
 //end raffle lottery
-
-#container
-  height: 100vh !important
- //overflow: hidden
-  padding: 0
-  position: relative
-  width: 100vw !important
-.box
-  width: 50px !important
-  height: 50px !important
+#container 
+  width: 100vw 
+  height: 100vh 
+  max-height: 100vh
   position: absolute
-  bottom: 0
+  top: 0 
+  left: 0
+  overflow: hidden
+.box
+  height: 49px
+  width: 49px
+  position: fixed
   right: 0
-  z-index: 9999
-  cursor: pointer
-  padding: 10px
+  bottom: 0
+  z-index: 999
+  display: flex 
+  justify-content: center 
+  align-items: center
   img 
     width: 40px 
     height: 40px
-    position: absolute 
-    top: 5px 
-    left: 5px
-
+[grid-cell]
+  position: absolute
+  width: 49px
+  height: 49px
 @import "media"
 
 
