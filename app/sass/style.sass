@@ -686,7 +686,6 @@ html.ngdialog-open, body.ngdialog-open
 .cryistals-wrapper
 	font-family: $main-font
 	max-width: 530px
-
 	width: 100%
 	margin: 0 auto
 	background: #FAFAFA
@@ -1811,31 +1810,21 @@ header.ng-scope
 .cryistals-header--lottery
 	padding-bottom: 0
 //end raffle lottery
-#container 
-  width: 100vw 
-  height: 100vh 
-  max-height: 100vh
-  position: absolute
-  top: 0 
-  left: 0
-  overflow: hidden
+
+#container
+  position: relative
+
 .box
-  height: 49px
-  width: 49px
-  position: fixed
-  right: 0
-  bottom: 0
-  z-index: 999
-  display: flex 
-  justify-content: center 
-  align-items: center
+  position: absolute
+  bottom: 10px
+  right: 10px
+  z-index: 9999
+  cursor: pointer
   img 
     width: 40px 
     height: 40px
-[grid-cell]
-  position: absolute
-  width: 49px
-  height: 49px
+
+
 @import "media"
 
 

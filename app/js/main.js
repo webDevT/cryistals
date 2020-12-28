@@ -61,36 +61,4 @@ $(".lottery-tab").click(function() {
 
 
 });
-var container = $("#container");
-var box = $(".box");
-
-var width  = 50;
-var height = 50;
-var rows   = 12;
-var cols   = 12;
-var snap   = 50;
-
-for (var i = 0; i < rows * cols; i++) {
-    var y = Math.floor(i / cols) * height;
-    var x = (i * width) % (cols * width);
-    $("<div grid-cell></div>").css({ top: y, left: x }).prependTo(container);
-}
-
-Draggable.create(box, {
-    bounds: container,
-    onDrag: onDrag
-});
-
-function onDrag() {
-
-    TweenLite.to(box, 0.5, {
-        x: Math.round(this.x / snap) * snap,
-        y: Math.round(this.y / snap) * snap,
-        ease: Back.easeOut.config(2)
-    });   
-}
-
-
-
-
 
