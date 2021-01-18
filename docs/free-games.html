@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="popup">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Cryistals</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/ngDialog.css">
+    <link rel="stylesheet" href="css/ngDialog-theme-default.css">
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+<body class="cryistals-body" ng-controller="MainCtrl">
+
+<div class="cryistals-wrapper">
+<!-- start header section -->
+	<div class="cryistals-header cryistals-header--page">
+	<div class="cryistals-container">
+		<div class="cryistals-header__top">
+			<a href="index.html" class="cryistals-back">
+				<img src="img/back.svg" alt="">Free Gems
+			</a>
+
+			
+</div>
+			
+
+	</div>
+</div>
+
+
+<div class="cryistals-container--game">
+<div class="cryistals-container">
+
+<div class="cristals__page-title">
+    Free Gems
+</div>
+
+<div class="free-games__content">
+    <div class="free-games__itams-wrapper">
+    <div class="cryistals-slider__card cryistals-slider__card--purple">
+                <div class="cryistals-slider__card-content">
+                    <div class="cryistal-slider__title">
+                        Invite Friends +
+                    </div>
+
+                    <div class="cryistal-slider__text">
+                        Over 1,000,000 gems
+                    </div>
+
+                    
+                </div>
+            </div>
+
+             
+            <div class="cryistals-slider__card cryistals-slider__card--pink">
+                <div class="cryistals-slider__card-content">
+                    <div class="cryistal-slider__title">
+                       Play more games
+                    </div>
+
+                    <div class="cryistal-slider__text">
+                        Over 1,000,000 
+                    </div>
+
+                    
+                </div>
+
+
+            </div>
+       
+</div>
+
+
+ <div class="cryistals-slider__card cryistals-slider__card--purple-star">
+                <div class="cryistals-slider__card-content">
+                    <div class="cryistal-slider__title">
+                        Special offers 1
+                    </div>
+
+                    <div class="cryistal-slider__text">
+                        Over 1,000,000 gems
+                    </div>
+
+                    
+                </div>
+            </div>
+
+ <div class="cryistals-slider__card cryistals-slider__card--pink-star">
+                <div class="cryistals-slider__card-content">
+                    <div class="cryistal-slider__title">
+                       Special offers 2
+                    </div>
+
+                    <div class="cryistal-slider__text">
+                        Over 1,000,000 gems
+                    </div>
+
+                    
+                </div>
+            </div>
+
+ <div class="cryistals-slider__card cryistals-slider__card--orange-star">
+                <div class="cryistals-slider__card-content">
+                    <div class="cryistal-slider__title">
+                       Special offers 3
+                    </div>
+
+                    <div class="cryistal-slider__text">
+                        Over 1,000,000 gems
+                    </div>
+
+                    
+                </div>
+            </div>
+
+     <div class="cryistals-slider__card cryistals-slider__card--orange">
+                <div class="cryistals-slider__card-content">
+                    <div class="cryistal-slider__title">
+                       Take a Survey
+                    </div>
+
+                    <div class="cryistal-slider__text">
+                        Over 1,000,000 gems
+                    </div>
+
+                    
+                </div>
+            </div>
+
+     <div class="cryistals-slider__card cryistals-slider__card--yellow">
+                <div class="cryistals-slider__card-content">
+                    <div class="cryistal-slider__title">
+                       Watch videos
+                    </div>
+
+                    <div class="cryistal-slider__text">
+                        Over 1,000,000 gems
+                    </div>
+
+                    
+                </div>
+            </div>
+
+</div>
+
+
+
+
+</div>
+</div>
+
+	
+
+
+</div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+    <script>window.angular || document.write('<script src="../bower_components/angular/angular.min.js">\x3C/script>')</script>
+    <script src="js/ngDialog.js"></script>
+
+    <!-- App -->
+    <script>
+        var app = angular.module('popup', ['ngDialog']);
+
+        app.config(['ngDialogProvider', function (ngDialogProvider) {
+            ngDialogProvider.setDefaults({
+                className: 'ngdialog-theme-default',
+            });
+        }]);
+
+        app.controller('MainCtrl', function ($scope, $rootScope, ngDialog, $timeout) {
+
+            $scope.open = function () {
+                ngDialog.open({ template: 'firstDialogId' });
+            };
+
+            $rootScope.$on('ngDialog.setPadding', function (event, padding)
+            {
+                angular.element( document.querySelector('.paddingHeader') ).css('padding-right', padding + 'px');
+            });
+        });
+    </script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/clipboard.js"></script>
+	 <script>
+  var clipboard = new ClipboardJS('.btn-clipboard');
+
+
+
+    </script>
+	<script src="js/libs.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

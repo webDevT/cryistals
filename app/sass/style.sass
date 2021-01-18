@@ -909,9 +909,36 @@ html.ngdialog-open, body.ngdialog-open
 	position: absolute 
 	bottom: -3px
 	right: -6px
-
+.cryistals-slider__card--purple-star
+  background: #E65F96
+.cryistals-slider__card--purple-star:before 
+  content: url('../img/stars.svg')
+  position: absolute 
+  bottom: -5px
+  right: -5px
+.cryistals-slider__card--pink-star
+  background: #F36580
+.cryistals-slider__card--pink-star:before 
+  content: url('../img/stars.svg')
+  position: absolute 
+  bottom: -5px
+  right: -5px
+.cryistals-slider__card--orange-star
+  background: linear-gradient(180deg, #FE8E6C 0%, #FF7E57 100%)
 .cryistals-slider__card--pink
 	background: linear-gradient(181.7deg, #FF8F6C 2.89%, #F36580 97.11%)
+.cryistals-slider__card--orange-star:before 
+  content: url('../img/stars.svg')
+  position: absolute 
+  bottom: -5px
+  right: -5px
+.cryistals-slider__card--yellow
+  background: linear-gradient(180deg, #FFC85A 0%, #FFBF41 100%)
+.cryistals-slider__card--yellow:before 
+  content: url('../img/play-button.svg')
+  position: absolute 
+  bottom: -5px
+  right: 0px
 .cryistal-slider__title
 	font-size: 24px
 	font-weight: 700
@@ -922,9 +949,16 @@ html.ngdialog-open, body.ngdialog-open
 	position: absolute 
 	bottom: -18px
 	right: -6px
+.cryistals-slider__card--orange 
+  background: linear-gradient(180deg, #FFAE4D 0%, #F99669 100%)
 .cryistal-slider__text
 	font-size: 16px
 	line-height: 20px
+.cryistals-slider__card--orange:before 
+  content: url('../img/icn_vote.svg')
+  position: absolute 
+  bottom: -4px
+  right: 0px
 //slider block
 
 //start slick style
@@ -1301,8 +1335,8 @@ header.ng-scope
 	h2 
 		padding-top: 10px !important
 		padding-bottom: 20px !important
-		font-size: 28px !important 
-		line-height: 1.5 !important
+		font-size: 24px !important 
+		line-height: 1.2 !important
 
 	.row 
 		flex-direction: column !important
@@ -1816,14 +1850,34 @@ header.ng-scope
 
 .box
   position: absolute
-  bottom: 10px
-  right: 10px
+  top: 0
   z-index: 9999
   cursor: pointer
-  img 
+  font-size: 0
+  svg
     width: 40px 
     height: 40px
 
+//start free games style
+.cristals__page-title
+  font-size: 22px 
+  font-weight: 700
+  padding-top: 10px
+.free-games__itams-wrapper
+  display: flex 
+  justify-content: space-between
+  .cryistals-slider__card
+    width: 42%
+    
+.free-games__content
+  padding-bottom: 16px
+  .cryistals-slider__card
+    margin-top: 16px
+    margin-right: 0
+
+
+
+//end free games style
 
 @import "media"
 
