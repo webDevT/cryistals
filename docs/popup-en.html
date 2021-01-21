@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="popup">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,13 +7,14 @@
 	<title>Cryistals</title>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/ngDialog.css">
+    <link rel="stylesheet" href="css/ngDialog-theme-default.css">
 	<link rel="stylesheet" href="css/style.min.css">
 </head>
-<body class="cryistals-body">
+<body class="cryistals-body" ng-controller="MainCtrl">
 
 <div class="cryistals-wrapper">
-	<form action="" id="form">
-		<!-- start header section -->
+<!-- start header section -->
 	<div class="cryistals-header cryistals-header--page">
 	<div class="cryistals-container">
 		<div class="cryistals-header__top">
@@ -21,57 +22,35 @@
 				<img src="img/back.svg" alt="">Back
 			</a>
 
-			<div class="cryistals-header__menu">
-				 <button type="submit" id="submit" name="submit" class="cryistals-back">Save</button>
-					
-				
-			</div>
+			
 </div>
 			
 
 	</div>
 </div>
 
-<!-- end header section -->
 
-<section class="cryistals-profile">
-	<div class="cryistals-profile-photo">
-		<div class="cryistals-header__contetn-photo">
-					<a href="profile.html" class="cryistals-header__photo">
-						<img src="img/photo1.png" alt="" class="cryistals-header__photo-img">
-					</a>
-				</div>
-	</div>
-
-
+<div class="cryistals-container--game cryistals-container--quiz">
 <div class="cryistals-container">
-	<div class="cryistals-profile__form">
+
+<div class="cristals__page-title">
+    Player Profile
+</div>
+<div class="cristals__sub-title">
+	To start making money in the game, please fill in the following fields
+
+</div>
+
+<div class="cryistals-profile__form">
 		
 			<div class="cryistals__form-row">
-			<div class="cryistals__label">
-			Full name
-			</div>
-			<input type="text" placeholder="Full name" class="cryistals__input" value="Alan Mitchel" id="first_name" name="name" >			
-		</div>
-
-		<div class="cryistals__form-row">
-			<div class="cryistals__label">
-			Email
-			</div>
-
-			<input type="text" id="email" name="email" placeholder="email" value="marvin@gmail.com" class="cryistals__input" readonly="">
-
-			
-		</div>
-		
-<div class="cryistals__form-row">
-			<div class="cryistals__label">
-			Your gender
-			</div>
+			<!-- <div class="cryistals__label">
+			Ваш пол
+			</div> -->
 
 			<select name="" id="" class="cryistals__input">
-			
-				<option value="" selected>FEMALE</option>
+				<option value="" disabled selected>Your gender</option>
+				<option value="">FEMALE</option>
 				<option value="">MALE</option>
 				<option value="">OTHER</option>
 			</select>
@@ -80,12 +59,10 @@
 
 		<div class="cryistals__form-row">
 			
-<div class="cryistals__label">
-			Year of birth
-			</div>
+
 			<select name="" id="" class="cryistals__input">
-				
-				<option value="" selected="">1960</option>
+				<option value="" disabled selected>Year of birth</option>
+				<option value="">1960</option>
 				<option value="">1961</option>
 				<option value="">1962</option>
 				<option value="">1963</option>
@@ -134,12 +111,11 @@
 		</div>
 		
 <div class="cryistals__form-row">
-		<div class="cryistals__label">
-			Marital status
-			</div>
+
 			<select name="" id="" class="cryistals__input">
-				
-				<option value="" selected>SINGLE</option>
+				<option value="" disabled selected>Marital status
+</option>
+				<option value="">SINGLE</option>
 				<option value="">MARRIED</option>
 				<option value="">DIVORCED</option>
 				<option value="">LIVING_WITH_PARTNER</option>
@@ -150,13 +126,12 @@
 					
 		</div>
 	<div class="cryistals__form-row">
-<div class="cryistals__label">
-			Have kids?
-			</div>
+
 			<select name="" id="" class="cryistals__input">
-				
+				<option value="" disabled selected>
+Have kids?</option>
 				<option value="">ZERO</option>
-				<option value=""  selected="">ONE</option>
+				<option value="">ONE</option>
 				<option value="">TWO</option>
 				<option value="">THREE</option>
 				<option value="">FOUR</option>
@@ -169,13 +144,11 @@ PREFER NOT TO SAY</option>
 					
 		</div>
 <div class="cryistals__form-row">
-<div class="cryistals__label">
-			Education
-			</div>
+
 			<select name="" id="" class="cryistals__input">
-				
+				<option value="" disabled selected>Education</option>
 				<option value="">ELEMENTARY SCHOOL</option>
-				<option value="" selected>MIDDLE SCHOOL</option>
+				<option value="">MIDDLE SCHOOL</option>
 				<option value="">HIGH SCHOOL</option>
 				<option value="">VOCATIONAL TECHNICAL COLLEGE</option>
 				<option value="">UNIVERSITY</option>
@@ -186,13 +159,11 @@ PREFER NOT TO SAY</option>
 
 
 <div class="cryistals__form-row">
-<div class="cryistals__label">
-			Employment
-			</div>
+
 			<select name="" id="" class="cryistals__input">
-				
+				<option value="" disabled selected>Employment</option></option>
 				<option value="">SELF EMPLOYED</option>
-				<option value="" selected="">UNEMPLOYED LOOKING</option>
+				<option value="">UNEMPLOYED LOOKING</option>
 				<option value="">UNEMPLOYED NOT LOOKING</option>
 				<option value="">
 HOMEMAKER</option>
@@ -206,12 +177,10 @@ HOMEMAKER</option>
 		</div>	
 
 <div class="cryistals__form-row">
-<div class="cryistals__label">
-			Carrer
-			</div>
+
 			<select name="" id="" class="cryistals__input">
-				
-				<option value="" selected>AGRICULTURE FORESTRY FISHING OR HUNTING</option>
+				<option value="" disabled selected>Carrer</option>
+				<option value="">AGRICULTURE FORESTRY FISHING OR HUNTING</option>
 				<option value="">ARTS ENTERTAINMENT OR RECREATION</option>
 				<option value="">BROADCASTING</option>
 				<option value="">CONSTRUCTION</option>
@@ -257,12 +226,10 @@ MARKET RESEARCH</option>
 				</select>	
 		</div>	
 <div class="cryistals__form-row">
-<div class="cryistals__label">
-			Race
-			</div>
+
 			<select name="" id="" class="cryistals__input">
-				
-				<option value="" selected>ARAB</option>
+				<option value="" disabled selected>Race</option>
+				<option value="">ARAB</option>
 				<option value="">ASIAN</option>
 				<option value="">BLACK</option>
 				<option value="">WHITE</option>
@@ -276,15 +243,13 @@ MARKET RESEARCH</option>
 		</div>
 
 <div class="cryistals__form-row">
-<div class="cryistals__label">
-			Income
-			</div>
+
 			<select name="" id="" class="cryistals__input">
-				
+				<option value="" disabled selected>Income</option>
 				<option value="">LOWER I
 
 </option>
-				<option value="" selected>MIDDLE I</option>
+				<option value="">MIDDLE I</option>
 				<option value="">MIDDLE II</option>
 				<option value="">HIGH I</option>
 				<option value="">HIGH II</option>
@@ -293,21 +258,65 @@ MARKET RESEARCH</option>
 		</select>
 					
 		</div>
-		
-	</div>
-	</div>
-</section>
 
-	</form>
+
+<div class="quiz-footer">
+	<div class="popup-button">
+		SUBMIT
+	</div>
+
+	<a href="index.html">Later
+</a>
+</div>
+	</div>
 
 
 
 
 </div>
-<script src="js/jquery.min.js"></script>
-	<script src="js/libs.min.js"></script>
+</div>
+
 	
 
+
+</div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+    <script>window.angular || document.write('<script src="../bower_components/angular/angular.min.js">\x3C/script>')</script>
+    <script src="js/ngDialog.js"></script>
+
+    <!-- App -->
+    <script>
+        var app = angular.module('popup', ['ngDialog']);
+
+        app.config(['ngDialogProvider', function (ngDialogProvider) {
+            ngDialogProvider.setDefaults({
+                className: 'ngdialog-theme-default',
+            });
+        }]);
+
+        app.controller('MainCtrl', function ($scope, $rootScope, ngDialog, $timeout) {
+
+            $scope.open = function () {
+                ngDialog.open({ template: 'firstDialogId' });
+            };
+
+            $rootScope.$on('ngDialog.setPadding', function (event, padding)
+            {
+                angular.element( document.querySelector('.paddingHeader') ).css('padding-right', padding + 'px');
+            });
+        });
+    </script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/clipboard.js"></script>
+	 <script>
+  var clipboard = new ClipboardJS('.btn-clipboard');
+
+
+
+    </script>
+	<script src="js/libs.min.js"></script>
 	<script src="js/main.js"></script>
 </body>
 </html>
