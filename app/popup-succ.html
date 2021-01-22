@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="popup">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Cryistals</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+<body class="cryistals-body"  ng-controller="MainCtrl" >
+<div >
+	
+
+<div class="cryistals-wrapper">
+
+
+
+
+
+
+
+		<a href="" class="openPaddingLink cryistals-play-earn-item" ng-click="open()">
+			open
+			
+		</a>
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+</div>
+			
+
+</div>
+
+
+<!-- Template -->
+    <script type="text/ng-template" id="firstDialogId">
+    	<div class="popup-content">
+    		<div class="popup-game">
+
+    		<h2 class="quiz-popup-title">Спасибо!</h2>
+    	<div class="popup-title popup-title-quiz">
+    		Ваш профиль успешно сохранён
+    	</div>
+    
+    	<a href="" class="popup-button">
+    		Продолжить игру
+
+    	</a>
+    		</div>
+    		
+    	</div>
+    	
+       
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+    <script>window.angular || document.write('<script src="../bower_components/angular/angular.min.js">\x3C/script>')</script>
+    <script src="js/ngDialog.js"></script>
+
+    <!-- App -->
+    <script>
+        var app = angular.module('popup', ['ngDialog']);
+
+        app.config(['ngDialogProvider', function (ngDialogProvider) {
+            ngDialogProvider.setDefaults({
+                className: 'ngdialog-theme-default',
+            });
+        }]);
+
+        app.controller('MainCtrl', function ($scope, $rootScope, ngDialog, $timeout) {
+
+            $scope.open = function () {
+                ngDialog.open({ template: 'firstDialogId' });
+            };
+
+          
+        });
+    </script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+
+
+
+
+	<script src="js/libs.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
