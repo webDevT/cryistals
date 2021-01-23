@@ -1883,14 +1883,14 @@ header.ng-scope
   text-align: center
 .cryistals-container--quiz
   background: #FAFAFA
-  height: 90vh
+
+  //height: 90vh
   .cristals__page-title
     text-align: center
 .quiz-footer
-  position: fixed 
-  bottom: 0vh 
-  left: 50% 
-  transform: translateX(-50%)
+  position: absolute
+  bottom: 0 
+  left: 0
   width: 530px 
   display: flex 
   justify-content: center
@@ -1907,40 +1907,58 @@ header.ng-scope
     color: #828282
 .cryistals-container--quiz
   .cryistals-profile__form
+    height: 90vh 
+    overflow-y: scroll
     padding-bottom: 100px
+    padding-right: 5px
+
 //end quiz
 .quiz-popup
-  position: fixed 
-  top: 0 
-  left: 50% 
-  width: 100% 
-  height: 100%
-  z-index: 99999
-  background: rgba(0,0,0,0.4)
-  max-width: 530px 
-  width: 100%
-  transform: translateX(-50%)
+  height: 90vh
+  overflow-y: hidden
+  width: 530px
+  position: relative
+
+  // display: flex 
+  // justify-content: center 
+  // align-items: center
   .cryistals-container--quiz
-      height: 80vh
-      position: absolute 
-      top: 50% 
-      left: 0 
-      width: 100% 
-      transform: translateY(-50%)
-      .cristals__page-title
-        padding-top: 30px
-      .cryistals-container
-        overflow-y: scroll
-        height: 100%
-      .cryistals-container::-webkit-scrollbar,
-      .cryistals-containerapper::-webkit-scrollbar
-        width: 0
+   
+    .cristals__page-title
+      padding-top: 30px
+    .cryistals-container
+      overflow-y: scroll
+      height: 100%
+    .cryistals-container::-webkit-scrollbar,
+    .cryistals-containerapper::-webkit-scrollbar
+      width: 0
 .popup-title-quiz
   text-align: center
   margin-bottom: 20px
 .quiz-popup-title
   margin-bottom: 0
   margin-bottom: 10px
+.ngdialog.ngdialog-theme-default.ngdialog--quiz
+  padding-top: 5vh 
+  padding-bottom: 5vh
+.cryistals-profile__form
+  scrollbar-width: thin
+.cryistals-profile__form::-webkit-scrollbar,
+.cryistals-profile__form::-webkit-scrollbar
+  width: 5px
+  background-color: #E0E0E0 
+.cryistals-profile__form::-webkit-scrollbar-track-piece,
+.cryistals-profile__form::-webkit-scrollbar-track-piece
+  background-color: #E0E0E0 
+  border: none
+.cryistals-profile__form::-webkit-scrollbar-thumb,
+.cryistals-profile__form::-webkit-scrollbar-thumb 
+  background-color: #aaa9a9
+  border-radius: 5px
+.popup-game--quiz
+  display: none
+  .quiz-popup-title
+    text-align: center
 @import "media"
 
 

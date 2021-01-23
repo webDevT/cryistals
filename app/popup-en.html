@@ -14,261 +14,278 @@
 <body class="cryistals-body" ng-controller="MainCtrl">
 
 <div class="cryistals-wrapper">
-
+<!-- start header section -->
 	
 
-<div class="quiz-popup">
-<div class="cryistals-container--quiz">
+
+
+<a href="" class="openPaddingLink cryistals-play-earn-item" ng-click="open()">
+			open
+			
+		</a>
+	
+
+
+</div>
+
+<script type="text/ng-template" id="firstDialogId">
+    	<div class="popup-content">
+    		<div class="quiz-popup">
+    <div class="cryistals-container--quiz">
 <div class="cryistals-container">
 
 <div class="cristals__page-title">
-    Player Profile
+    Анкета игрока
 </div>
 <div class="cristals__sub-title">
-	To start making money in the game, please fill in the following fields
-
+    Чтобы начать зарабатывать деньги в игре, пожалуйста заполните следующие поля
 </div>
 
 <div class="cryistals-profile__form">
-		
-			<div class="cryistals__form-row">
-			<!-- <div class="cryistals__label">
-			Ваш пол
-			</div> -->
+        
+            <div class="cryistals__form-row">
+            
 
-			<select name="" id="" class="cryistals__input">
-				<option value="" disabled selected>Your gender</option>
-				<option value="">FEMALE</option>
-				<option value="">MALE</option>
-				<option value="">OTHER</option>
-			</select>
-					
-		</div>
+            <select name="" id="" class="cryistals__input">
+                <option value="" disabled selected>Ваш пол</option>
+                <option value="">Мужской</option>
+                <option value="">Женский</option>
+                <option value="">Другое</option>
+            </select>
+                    
+        </div>
 
-		<div class="cryistals__form-row">
-			
+        <div class="cryistals__form-row">
+            
 
-			<select name="" id="" class="cryistals__input">
-				<option value="" disabled selected>Year of birth</option>
-				<option value="">1960</option>
-				<option value="">1961</option>
-				<option value="">1962</option>
-				<option value="">1963</option>
-				<option value="">1964</option>
-				<option value="">1965</option>
-				<option value="">1966</option>
-				<option value="">1967</option>
-				<option value="">1968</option>
-				<option value="">1969</option>
-				<option value="">1970</option>
-				<option value="">1971</option>
-				<option value="">1972</option>
-				<option value="">1973</option>
-				<option value="">1974</option>
-				<option value="">1975</option>
-				<option value="">1976</option>
-				<option value="">1977</option>
-				<option value="">1978</option>
-				<option value="">1979</option>
-				<option value="">1980</option>
-				<option value="">1981</option>
-				<option value="">1982</option>
-				<option value="">1983</option>
-				<option value="">1984</option>
-				<option value="">1985</option>
-				<option value="">1986</option>
-				<option value="">1987</option>
-				<option value="">1988</option>
-				<option value="">1989</option>
-				<option value="">1990</option>
-				<option value="">1991</option>
-				<option value="">1992</option>
-				<option value="">1993</option>
-				<option value="">1994</option>
-				<option value="">1995</option>
-				<option value="">1996</option>
-				<option value="">1997</option>
-				<option value="">1998</option>
-				<option value="">1999</option>
-				<option value="">2000</option>
-				<option value="">2001</option>
-				<option value="">2002</option>
-				<option value="">2003</option>
-			</select>
-					
-		</div>
-		
+            <select name="" id="" class="cryistals__input">
+                <option value="" disabled selected>Год рождения</option>
+                <option value="">1960</option>
+                <option value="">1961</option>
+                <option value="">1962</option>
+                <option value="">1963</option>
+                <option value="">1964</option>
+                <option value="">1965</option>
+                <option value="">1966</option>
+                <option value="">1967</option>
+                <option value="">1968</option>
+                <option value="">1969</option>
+                <option value="">1970</option>
+                <option value="">1971</option>
+                <option value="">1972</option>
+                <option value="">1973</option>
+                <option value="">1974</option>
+                <option value="">1975</option>
+                <option value="">1976</option>
+                <option value="">1977</option>
+                <option value="">1978</option>
+                <option value="">1979</option>
+                <option value="">1980</option>
+                <option value="">1981</option>
+                <option value="">1982</option>
+                <option value="">1983</option>
+                <option value="">1984</option>
+                <option value="">1985</option>
+                <option value="">1986</option>
+                <option value="">1987</option>
+                <option value="">1988</option>
+                <option value="">1989</option>
+                <option value="">1990</option>
+                <option value="">1991</option>
+                <option value="">1992</option>
+                <option value="">1993</option>
+                <option value="">1994</option>
+                <option value="">1995</option>
+                <option value="">1996</option>
+                <option value="">1997</option>
+                <option value="">1998</option>
+                <option value="">1999</option>
+                <option value="">2000</option>
+                <option value="">2001</option>
+                <option value="">2002</option>
+                <option value="">2003</option>
+            </select>
+                    
+        </div>
+        
 <div class="cryistals__form-row">
 
-			<select name="" id="" class="cryistals__input">
-				<option value="" disabled selected>Marital status
-</option>
-				<option value="">SINGLE</option>
-				<option value="">MARRIED</option>
-				<option value="">DIVORCED</option>
-				<option value="">LIVING_WITH_PARTNER</option>
-				<option value="">SEPARATED</option>
-				<option value="">WIDOWED</option>
-				<option value="">PREFER_NOT_TO_SAY</option>
-			</select>
-					
-		</div>
-	<div class="cryistals__form-row">
+            <select name="" id="" class="cryistals__input">
+                <option value="" disabled selected>Семейный статус</option>
+                <option value="">Не замужем/Не женат</option>
+                <option value="">В браке</option>
+                <option value="">В разводе</option>
+                <option value="">Живу с партнёром</option>
+                <option value="">Вдова/Вдовец</option>
+                <option value="">Предпочитаю не говорить</option>
+            </select>
+                    
+        </div>
+    <div class="cryistals__form-row">
 
-			<select name="" id="" class="cryistals__input">
-				<option value="" disabled selected>
-Have kids?</option>
-				<option value="">ZERO</option>
-				<option value="">ONE</option>
-				<option value="">TWO</option>
-				<option value="">THREE</option>
-				<option value="">FOUR</option>
-				<option value="">FIVE</option>
-				<option value="">SIX OR MORE</option>
-				<option value="">SIX OR MORE</option>
-<option value="">
-PREFER NOT TO SAY</option>
-			</select>
-					
-		</div>
+            <select name="" id="" class="cryistals__input">
+                <option value="" disabled selected>Есть дети?</option>
+                <option value="">Нет</option>
+                <option value="">Один</option>
+                <option value="">Два</option>
+                <option value="">Три</option>
+                <option value="">Четыре</option>
+                <option value="">Пять</option>
+                <option value="">Шесть или больее</option>
+                <option value="">Предпочитаю не говорить</option>
+            </select>
+                    
+        </div>
 <div class="cryistals__form-row">
 
-			<select name="" id="" class="cryistals__input">
-				<option value="" disabled selected>Education</option>
-				<option value="">ELEMENTARY SCHOOL</option>
-				<option value="">MIDDLE SCHOOL</option>
-				<option value="">HIGH SCHOOL</option>
-				<option value="">VOCATIONAL TECHNICAL COLLEGE</option>
-				<option value="">UNIVERSITY</option>
-				<option value="">POST GRADUATE</option>
-			</select>
-					
-		</div>	
+            <select name="" id="" class="cryistals__input">
+                <option value="" disabled selected>Образование</option>
+                <option value="">Начальная школа</option>
+                <option value="">Средняя школа</option>
+                <option value="">Старшая школа</option>
+                <option value="">Профессионально-технический коледж</option>
+                <option value="">Четыре</option>
+                <option value="">Университет</option>
+                <option value="">Последипломное</option>
+            </select>
+                    
+        </div>  
 
 
 <div class="cryistals__form-row">
 
-			<select name="" id="" class="cryistals__input">
-				<option value="" disabled selected>Employment</option></option>
-				<option value="">SELF EMPLOYED</option>
-				<option value="">UNEMPLOYED LOOKING</option>
-				<option value="">UNEMPLOYED NOT LOOKING</option>
-				<option value="">
-HOMEMAKER</option>
-				<option value="">STUDENT</option>
-				<option value="">MILITARY</option>
-				<option value="">RETIRED</option>
-				<option value="">UNABLE TO WORK</option>
-				<option value="">OTHER</option>
-			</select>
-					
-		</div>	
+            <select name="" id="" class="cryistals__input">
+                <option value="" disabled selected>Занятость</option>
+                <option value="">Наёмный рабочий</option>
+                <option value="">Частный предприниматель</option>
+                <option value="">Безработный (в поиске)</option>
+                <option value="">Безработный (не ищу)</option>
+                <option value="">Домозозяйка</option>
+                <option value="">Студент</option>
+                <option value="">Военный</option>
+                <option value="">На пенсии</option>
+                <option value="">Нетрудоспособный</option>
+                <option value="">Разное</option>
+            </select>
+                    
+        </div>  
 
 <div class="cryistals__form-row">
 
-			<select name="" id="" class="cryistals__input">
-				<option value="" disabled selected>Carrer</option>
-				<option value="">AGRICULTURE FORESTRY FISHING OR HUNTING</option>
-				<option value="">ARTS ENTERTAINMENT OR RECREATION</option>
-				<option value="">BROADCASTING</option>
-				<option value="">CONSTRUCTION</option>
-				<option value="">EDUCATION</option>
-				<option value="">FINANCE AND INSURANCE</option>
-				<option value="">GOVERNMENT AND PUBLIC ADMINISTRATION</option>
-				<option value="">HEALTH_CARE_AND_SOCIAL_ASSISTANCE</option>
-				<option value="">HOMEMAKER</option>
-				<option value="">HOTEL AND FOOD SERVICES</option>
-				<option value="">INFORMATION OTHER</option>
-				<option value="">INFORMATION SERVICES AND DATA</option>
-				<option value="">LEGAL SERVICES</option>
-				<option value="">MANUFACTURING COMPUTER AND ELECTRONICS</option>
-				<option value="">MANUFACTURING OTHER</option>
-				<option value="">MILITARY</option>
-				<option value="">MINING</option>
-				<option value="">PROCESSING</option>
-				<option value="">PUBLISHING</option>
-				<option value="">REAL ESTATE RENTAL OR LEASING</option>
-				<option value="">
-RELIGIOUS</option>
-				<option value="">RETAIL</option>
-				<option value="">SCIENTIFIC OR TECHNICAL SERVICES</option>
-				<option value="">SOFTWARE</option>
-				<option value="">STUDENT</option>
-				<option value="">TELECOMMUNICATIONS</option>
-				<option value="">TRANSPORTATION AND WAREHOUSING</option>
-				<option value="">UNEMPLOYED</option>
-				<option value="">ENERGY UTILITIES OIL AND GAS</option>
-				<option value="">WHOLESALE</option>
-				<option value="">OTHER</option>
-				<option value="">ADVERTISING</option>
-				<option value="">AUTOMOTIVE</option>
-				<option value="">CONSULTING</option>
-				<option value="">FASHION APPAREL</option>
-				<option value="">HUMAN RESOURCES</option>
-				<option value="">
-MARKET RESEARCH</option>
-				<option value="">MARKETING SALES</option>
-				<option value="">SHIPPING DISTRIBUTION</option>
-				<option value="">PERSONAL SERVICES</option>
-				<option value="">SECURITY</option>
-				</select>	
-		</div>	
+            <select name="" id="" class="cryistals__input">
+                <option value="" disabled selected>Карьера</option>
+                <option value="">Сельское хозяйство, лесное хозяйство, рыбалка и охота</option>
+                <option value="">Искуство, развлечения и отдых</option>
+                <option value="">Вещание</option>
+                <option value="">Строительство</option>
+                <option value="">Образование</option>
+                <option value="">Финансы и страхование</option>
+                <option value="">Правительство и государственная администрация</option>
+                <option value="">Здравоохранение и социальная помощь</option>
+                <option value="">Домохозяйка</option>
+                <option value="">Информационные услуги и данные</option>
+                <option value="">Юридические услуги</option>
+                <option value="">Производство компьютеров и электроники</option>
+                <option value="">Военный</option>
+                <option value="">Добыча полезных ископаемых</option>
+                <option value="">Оброботка</option>
+                <option value="">Издательство</option>
+                <option value="">Добыча полезных ископаемых</option>
+                <option value="">Аренда и сдача недвижемости</option>
+                <option value="">Религия</option>
+                <option value="">Розничная торговля</option>
+                <option value="">На пенсии</option>
+                <option value="">Научные или технические сервисы</option>
+                <option value="">Програмное обеспечение</option>
+                <option value="">Студент</option>
+                <option value="">Телекоммуникации</option>
+                <option value="">Транспортирвка и склады</option>
+                <option value="">Безработный</option>
+                <option value="">Энергетика, нефть и газ</option>
+                <option value="">Оптовые продажи</option>
+                <option value="">Разное</option>
+                <option value="">Реклама</option>
+                <option value="">Автомобили</option>
+                <option value="">Консалтинг</option>
+                <option value="">Мода</option>
+                <option value="">Отдел кадров</option>
+                <option value="">Исследования рынка</option>
+                <option value="">Маркетинговые продажи</option>
+                <option value="">Доставка</option>
+                <option value="">Персональные услуги</option>
+                <option value="">Безопасность</option>
+                </select>   
+        </div>  
 <div class="cryistals__form-row">
 
-			<select name="" id="" class="cryistals__input">
-				<option value="" disabled selected>Race</option>
-				<option value="">ARAB</option>
-				<option value="">ASIAN</option>
-				<option value="">BLACK</option>
-				<option value="">WHITE</option>
-				<option value="">HISPANIC</option>
-				<option value="">LATINO</option>
-				<option value="">MULTIRACIAL</option>
-				<option value="">OTHER</option>
-				<option value="">PREFER NOT TO SAY</option>
-		</select>
-					
-		</div>
+            <select name="" id="" class="cryistals__input">
+                <option value="" disabled selected>Раса</option>
+                <option value="">Арабский</option>
+                <option value="">Азиатский</option>
+                <option value="">Черный</option>
+                <option value="">Белый</option>
+                <option value="">Испанская</option>
+                <option value="">Латиноамерикаская</option>
+                <option value="">Мультирассовый</option>
+                <option value="">Разное</option>
+                <option value="">Предпочитаю не гворить</option>
+        
+        </select>
+                    
+        </div>
 
 <div class="cryistals__form-row">
 
-			<select name="" id="" class="cryistals__input">
-				<option value="" disabled selected>Income</option>
-				<option value="">LOWER I
-
-</option>
-				<option value="">MIDDLE I</option>
-				<option value="">MIDDLE II</option>
-				<option value="">HIGH I</option>
-				<option value="">HIGH II</option>
-				<option value="">HIGH III</option>
-				<option value="">PREFER NOT TO SAY</option>		
-		</select>
-					
-		</div>
+            <select name="" id="" class="cryistals__input">
+                <option value="" disabled selected>Доход</option>
+                <option value="">Низкий I</option>
+                <option value="">Низкий II</option>
+                <option value="">Средний I</option>
+                <option value="">Средний II</option>
+                <option value="">Высокий I</option>
+                <option value="">Высокий II</option>
+                <option value="">Высокий III</option>
+                <option value="">Предпочитаю не гворить</option>
+        
+        </select>
+                    
+        </div>
 
 
 <div class="quiz-footer">
-	<div class="popup-button">
-		SUBMIT
-	</div>
+    <div class="popup-button">
+        Отправить
+    </div>
 
-	<a href="index.html">Later
-</a>
+    <a href="index.html">Позже</a>
 </div>
-	</div>
+    </div>
 
 
-
-
-</div>
-</div>
-
-	</div>
 
 
 </div>
+</div>
+</div>
 
+<div class="popup-game popup-game--quiz">
+
+    		<h2 class="quiz-popup-title">Congratulation!
+</h2>
+    	<div class="popup-title popup-title-quiz">
+    		Your profile has been successfully saved.
+    	</div>
+    
+    	<a href="" class="popup-button">
+    		Continue playing
+
+    	</a>
+    		</div>
+    		
+    	</div>
+    	
+       
+    </script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
     <script>window.angular || document.write('<script src="../bower_components/angular/angular.min.js">\x3C/script>')</script>
@@ -280,7 +297,7 @@ MARKET RESEARCH</option>
 
         app.config(['ngDialogProvider', function (ngDialogProvider) {
             ngDialogProvider.setDefaults({
-                className: 'ngdialog-theme-default',
+                className: 'ngdialog-theme-default ngdialog--quiz',
             });
         }]);
 
@@ -290,10 +307,7 @@ MARKET RESEARCH</option>
                 ngDialog.open({ template: 'firstDialogId' });
             };
 
-            $rootScope.$on('ngDialog.setPadding', function (event, padding)
-            {
-                angular.element( document.querySelector('.paddingHeader') ).css('padding-right', padding + 'px');
-            });
+          
         });
     </script>
 	<script src="js/jquery.min.js"></script>
