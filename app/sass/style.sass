@@ -1909,7 +1909,7 @@ header.ng-scope
   .cryistals-profile__form
     height: 90vh 
     overflow-y: scroll
-    padding-bottom: 100px
+    padding-bottom: 250px
     padding-right: 5px
 
 //end quiz
@@ -1959,6 +1959,60 @@ header.ng-scope
   display: none
   .quiz-popup-title
     text-align: center
+
+//start player activit item
+.players-activity__item
+  padding-top: 20px 
+  padding-bottom: 20px 
+  border-bottom: 1px solid #E0E0E0
+  display: flex
+  align-items: center
+  text-decoration: none
+.players-activity__item:last-child
+  border-bottom: none
+.players-activity__img-wrapper
+  width: 44px
+  height: 44px
+  background: linear-gradient(180deg, #F8F8F8 0%, #F4F4F4 100%)
+  border-radius: 5px 
+  display: flex 
+  justify-content: center 
+  align-items: center
+  margin-right: 10px
+.players-activity__text
+  color: #828282
+//end player activity item
+
+
+//start recent-payments
+.recent-payments__item
+  .transactions-history__amount
+    white-space: nowrap
+  .leaderboard__item-user-info
+    padding-left: 0
+  .transactions-history__amount 
+    padding-left: 0
+  .transactions-history__amount-wrapper 
+    background-image: none
+    padding-left: 20px 
+    padding-right: 20px
+.recent-payments__photo
+  img 
+    width: 58px 
+    height: 58px
+.recent-payments__info-wrapper
+  text-align: left
+  margin-left: 10px
+  .leaderboard__name
+    margin-left: 0
+.recent-payments__date
+  color: #828282
+  font-size: 14px
+.recent-payments__text
+  font-size: 14px
+  margin-top: 5px
+
+//end recent-payments
 @import "media"
 
 
