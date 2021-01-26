@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="ngApp">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -53,7 +53,7 @@
 					Estelle F.
 					</div>
 					<div class="recent-payments__date">
-						2 days ago
+						<span time-ago from-time="2014-03-11T05:25:00Z"></span>
 					</div>
 
 					<div class="recent-payments__text">
@@ -91,7 +91,7 @@ $ 108.50
 					Brent B.
 					</div>
 					<div class="recent-payments__date">
-						2 days ago
+						<span time-ago from-time="2020-03-11T05:25:00Z"></span>
 					</div>
 
 					<div class="recent-payments__text">
@@ -128,7 +128,7 @@ $ 108.50
 					Lula G.
 					</div>
 					<div class="recent-payments__date">
-						2 days ago
+						<span time-ago from-time="2019-03-11T05:25:00Z"></span>
 					</div>
 
 					<div class="recent-payments__text">
@@ -166,7 +166,7 @@ $ 107.00
 					Ora W.
 					</div>
 					<div class="recent-payments__date">
-						2 days ago
+						<span time-ago from-time="2020-03-11T05:25:00Z"></span>
 					</div>
 
 					<div class="recent-payments__text">
@@ -203,7 +203,7 @@ $ 107.00
 					Viole S.
 					</div>
 					<div class="recent-payments__date">
-						2 days ago
+						<span time-ago from-time="2020-03-11T05:25:00Z"></span>
 					</div>
 
 					<div class="recent-payments__text">
@@ -236,6 +236,16 @@ $ 105.00
 
 
 </div>
+
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+ <script src="js/angular-timeago.js"></script>
+ <script type="text/javascript">
+'use strict';
+var app = angular.module('ngApp', [
+  'yaru22.angular-timeago'
+]);
+
+ </script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="js/libs.min.js"></script>
 	<script src="js/main.js"></script>
