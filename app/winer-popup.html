@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="popup">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Cryistals</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/ngDialog.css">
+    <link rel="stylesheet" href="css/ngDialog-theme-default.css">
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+<body class="cryistals-body" ng-controller="MainCtrl">
+
+<div class="cryistals-wrapper">
+<!-- start header section -->
+	
+
+
+
+<a href="" class="openPaddingLink cryistals-play-earn-item" ng-click="open()">
+			open
+			
+		</a>
+	
+
+
+</div>
+
+
+ <script type="text/ng-template" id="firstDialogId">
+    	<div class="popup-content">
+    <div class="popup-cong">
+        <div class="popup-title popup-title--win">
+        Congratulations!</div>
+   
+
+        <div class="popup-cong-gems popup-win-title invite-friends__form-title--gradient">
+        You win
+$
+XXX</div>
+
+<p class="win-popup__text">
+Please, open "My Payments" and submit payment details
+</p>
+            <a href="my-payments.html" class="win-popup-btn invite-friends__form-button">
+                My payments
+            </a>
+            <a href="" class="win-popup__link">Later</a>
+    </div>
+</div>
+       
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+    <script>window.angular || document.write('<script src="../bower_components/angular/angular.min.js">\x3C/script>')</script>
+    <script src="js/ngDialog.js"></script>
+
+    <!-- App -->
+    <script>
+        var app = angular.module('popup', ['ngDialog']);
+
+        app.config(['ngDialogProvider', function (ngDialogProvider) {
+            ngDialogProvider.setDefaults({
+                className: 'ngdialog-theme-default',
+            });
+        }]);
+
+        app.controller('MainCtrl', function ($scope, $rootScope, ngDialog, $timeout) {
+
+            $scope.open = function () {
+                ngDialog.open({ template: 'firstDialogId' });
+            };
+
+          
+        });
+    </script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/clipboard.js"></script>
+	 <script>
+  var clipboard = new ClipboardJS('.btn-clipboard');
+
+
+
+    </script>
+	<script src="js/libs.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

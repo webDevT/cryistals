@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="popup">
+<html lang="en" ng-app="popup" class="ng-scope">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/ngDialog.css">
     <link rel="stylesheet" href="css/ngDialog-theme-default.css">
+<link href="css/angular-moment-picker.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.min.css">
 </head>
 <body class="cryistals-body" ng-controller="MainCtrl">
@@ -24,6 +25,18 @@
 			
 		</a>
 	
+
+<div class="input-group"
+     moment-picker="ctrl.datepicker"
+     format="YYYY-MM-DD">
+    <span class="input-group-addon">
+        <i class="octicon octicon-calendar"></i>
+    </span>
+    <input class="form-control"
+           placeholder="Select a date"
+           ng-model="ctrl.datepicker"
+           ng-model-options="{ updateOn: 'blur' }">
+</div>
 
 
 </div>
@@ -287,7 +300,10 @@
        
     </script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment-with-locales.js"></script>
+<script src="js/angular-moment-picker.min.js"></script>
+<script>var myApp = angular.module('myApp', ['moment-picker']);</script>
     <script>window.angular || document.write('<script src="../bower_components/angular/angular.min.js">\x3C/script>')</script>
     <script src="js/ngDialog.js"></script>
 
@@ -310,6 +326,8 @@
           
         });
     </script>
+
+
 	<script src="js/jquery.min.js"></script>
 	<script src="js/clipboard.js"></script>
 	 <script>
@@ -318,6 +336,7 @@
 
 
     </script>
+
 	<script src="js/libs.min.js"></script>
 	<script src="js/main.js"></script>
 </body>
