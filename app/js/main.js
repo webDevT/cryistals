@@ -15,14 +15,14 @@ jQuery(function($){
   });
 });
 
-$('.cryistals-slider').slick({
-  slidesToShow: 1,
-  arrows:false,
-  dots:false,
-  centerPadding: '50px',
-  centerMode: true
+// $('.cryistals-slider').slick({
+//   slidesToShow: 1,
+//   arrows:false,
+//   dots:false,
+//   centerPadding: '50px',
+//   centerMode: true
  
-})
+// })
 
 
 
